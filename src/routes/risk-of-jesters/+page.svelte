@@ -1,6 +1,6 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import { PUBLIC_GITHUB_RELEASE_API_URL, PUBLIC_GITHUB_RELEASE_DOWNLOAD_URL } from "$env/static/public";
+    import { GITHUB_RELEASE_API_URL, GITHUB_RELEASE_DOWNLOAD_URL } from "$lib/const";
     import { latest } from "$lib/store";
     import ContentEntry from "$components/ContentEntry.svelte";
     import IconList from "$components/IconList.svelte";
@@ -8,7 +8,7 @@
     let tag = $latest?.["risk-of-jesters"] ?? undefined;
 
     onMount(async () => {
-        const response = await fetch(PUBLIC_GITHUB_RELEASE_API_URL.replace("{repo}", "risk-of-jesters"))
+        const response = await fetch(GITHUB_RELEASE_API_URL.replace("{repo}", "risk-of-jesters"))
             .then(result => result.json());
 
         $latest["risk-of-jesters"] = response["tag_name"];
@@ -17,9 +17,8 @@
 
     function download()
     {
-        console.log(tag)
         if (tag)
-            window.open(PUBLIC_GITHUB_RELEASE_DOWNLOAD_URL
+            window.open(GITHUB_RELEASE_DOWNLOAD_URL
                 .replace("{repo}", "risk-of-jesters")
                 .replace("{tag}", tag)
                 .replace("{filename}", "RiskofJesters.zip"), "_blank");

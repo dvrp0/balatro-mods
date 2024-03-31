@@ -1,0 +1,2 @@
+export const GITHUB_RELEASE_API_URL = "https://api.github.com/repos/dvrp0/{repo}/releases/latest";
+export const GITHUB_RELEASE_DOWNLOAD_URL = "https://github.com/dvrp0/{repo}/releases/download/{tag}/{filename}";
