@@ -37,7 +37,7 @@
     {/if}
 </button>
 <span class="mt-16">
-    Adds new Jokers, Vouchers, and Blinds themed with the Risk of Rain franchise while still retaining the feeling of vanilla Balatro.
+    New Jokers, Vouchers, and Blinds themed with the Risk of Rain franchise make their entrance, yet still retaining the feeling of vanilla Balatro.
     The volume is not that big yet, but you can expect more to come as new DLC for Risk of Rain 2 is approaching...
 </span>
 <span class="font-bold mt-16 mb-4">Installation</span>
@@ -95,6 +95,14 @@
         description="Start with random half of the deck debuffed" />
     <ContentEntry name="Tyrian Crab" type="Final Boss Blind" image="/images/blinds/bl_final_crab.png"
         description="X1.5 required Chips after each hand played" />
+</div>
+<span class="font-bold mt-16 mb-4">Screenshots</span>
+<div class="grid grid-cols-1 mt-4 gap-4 *:rounded-xl">
+    <img src="/images/screenshots/risk-of-jesters/1.png" alt="Risk of Jesters Screenshot 1" />
+    <img src="/images/screenshots/risk-of-jesters/2.png" alt="Risk of Jesters Screenshot 2" />
+    <img src="/images/screenshots/risk-of-jesters/3.png" alt="Risk of Jesters Screenshot 3" />
+    <img src="/images/screenshots/risk-of-jesters/4.png" alt="Risk of Jesters Screenshot 4" />
+    <img src="/images/screenshots/risk-of-jesters/5.png" alt="Risk of Jesters Screenshot 5" />
 </div>
 <span class="font-bold mt-16 mb-4">Changelog</span>
 <IconList kind="sparkle" items={[
