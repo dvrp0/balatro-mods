@@ -5,6 +5,10 @@
     import ContentEntry from "$components/ContentEntry.svelte";
     import IconList from "$components/IconList.svelte";
 
+    const screenshots = Object.keys(import.meta.glob("/static/images/screenshots/risk-of-jesters/*.png", {
+        eager: true
+    })).map(x => x.replace("/static", ""));
+
     let tag = $latest?.["risk-of-jesters"] ?? undefined;
 
     onMount(async () => {
@@ -98,11 +102,9 @@
 </div>
 <span class="font-bold mt-16 mb-4">Screenshots</span>
 <div class="grid grid-cols-1 mt-4 gap-4 *:rounded-xl">
-    <img src="/images/screenshots/risk-of-jesters/1.png" alt="Risk of Jesters Screenshot 1" />
-    <img src="/images/screenshots/risk-of-jesters/2.png" alt="Risk of Jesters Screenshot 2" />
-    <img src="/images/screenshots/risk-of-jesters/3.png" alt="Risk of Jesters Screenshot 3" />
-    <img src="/images/screenshots/risk-of-jesters/4.png" alt="Risk of Jesters Screenshot 4" />
-    <img src="/images/screenshots/risk-of-jesters/5.png" alt="Risk of Jesters Screenshot 5" />
+    {#each screenshots as src}
+        <img {src} alt="Risk of Jesters Screenshot" loading="lazy" />
+    {/each}
 </div>
 <span class="font-bold mt-16 mb-4">Changelog</span>
 <IconList kind="sparkle" items={[

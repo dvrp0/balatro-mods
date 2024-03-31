@@ -12,7 +12,7 @@
 
 <div class="flex flex-col bg-gray-100 rounded-xl w-full p-6 transition-all duration-300">
     <div class="flex items-center">
-        <img class="flex-[30%]" src={image} alt={name} />
+        <img class="flex-[30%]" src={image} alt={name} loading="lazy" />
         <div class="ml-4 flex flex-col flex-[100%]">
             <span class="font-bold">{name}</span>
             <div class="mb-4 flex items-center flex-wrap">

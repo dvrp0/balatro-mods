@@ -8,7 +8,7 @@
 
 <div class="{big ? "w-[40px] h-[40px]" : "w-[20px] h-[20px]"} {color}"
     style="--src: url({src});">
-    <img class="opacity-0" {src} alt="Icon" />
+    <img class="opacity-0" {src} alt="Icon" loading="lazy" />
 </div>
 
 <style>
