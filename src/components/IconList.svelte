@@ -7,8 +7,8 @@
 </script>
 
 <div class="flex flex-col">
-    {#each items as item (item)}
-        <div class="flex items-start mb-4">
+    {#each items as item, i (item)}
+        <div class="flex items-start {i < items.length - 1 ? "mb-4" : ""}">
             <div class="flex-0.1 mt-[0.2rem]">
                 <Icon {kind} />
             </div>
