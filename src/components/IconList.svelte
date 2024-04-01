@@ -8,8 +8,8 @@
 
 <div class="flex flex-col">
     {#each items as item (item)}
-        <div class="flex items-center mb-4">
-            <div class="flex-0.1">
+        <div class="flex items-start mb-4">
+            <div class="flex-0.1 mt-[0.2rem]">
                 <Icon {kind} />
             </div>
             <div class="flex-1 ml-2">
