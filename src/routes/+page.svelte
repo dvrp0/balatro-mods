@@ -18,7 +18,7 @@
         description,
         images: [
             {
-                url: "/images/thumbnails/og.png"
+                url: "/images/thumbnails/main-og.png"
             }
         ]
     }}
