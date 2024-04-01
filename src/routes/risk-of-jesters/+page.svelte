@@ -4,6 +4,7 @@
     import { GITHUB_RELEASE_API_URL, GITHUB_RELEASE_DOWNLOAD_URL } from "$lib/const";
     import { latest } from "$lib/store";
     import ContentEntry from "$components/ContentEntry.svelte";
+    import Icon from "$components/Icon.svelte";
     import IconList from "$components/IconList.svelte";
 
     const title = "Risk of Jesters - DVRP's Balatro Mods";
@@ -71,14 +72,19 @@
 <div class="flex">
     <span class="font-bold">Risk of Jesters</span>
 </div>
-<button class="mt-4" on:click={download}>
-    Download
-    {#if !tag}
-        ···
-    {:else}
-        {tag}
-    {/if}
-</button>
+<div class="flex mt-4">
+    <button on:click={download}>
+        Download
+        {#if !tag}
+            ···
+        {:else}
+            {tag}
+        {/if}
+    </button>
+    <button class="fit ml-2 bg-gray-200 hover:bg-gray-400" on:click={() => window.open("https://github.com/dvrp0/risk-of-jesters")}>
+        <Icon kind="github" color="bg-gray-900" />
+    </button>
+</div>
 <span class="mt-16">
     New Jokers, Vouchers, and Blinds themed with the Risk of Rain franchise make their entrance, yet still retaining the feeling of vanilla Balatro.
     The volume is not that big yet, but you can expect more to come as new DLC for Risk of Rain 2 is approaching...
@@ -90,7 +96,7 @@
     and
     <a href="https://github.com/ethangreen-dev/lovely-injector/releases" target="_blank">Lovely</a>.`,
     `Download the mod and unzip it.`,
-    `Put <xin><c>RiskofJesters</></> folder into <xin><c>C:\\Users\\(USER)\\AppData\\Roaming\\Balatro\\Mods</></>. Create the <xin><c>Mods</></> folder if it doesn't exist.`,
+    `Put <xin><c>RiskofJesters</></d> folder into <xin><c>C:\\Users\\(USER)\\AppData\\Roaming\\Balatro\\Mods</bu></>. Create the <xin><c>Mods</></> folder if it doesn't exist.`,
 ]} />
 <span class="font-bold mt-16 mb-4">Contents</span>
 <span>
