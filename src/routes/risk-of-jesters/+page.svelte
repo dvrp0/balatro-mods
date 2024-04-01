@@ -98,6 +98,10 @@
     `Download the mod and unzip it.`,
     `Put <xin><c>RiskofJesters</></d> folder into <xin><c>C:\\Users\\(USER)\\AppData\\Roaming\\Balatro\\Mods</bu></>. Create the <xin><c>Mods</></> folder if it doesn't exist.`,
 ]} />
+<span class="font-bold mt-16 mb-4">Languages</span>
+<span>
+    English 🇬🇧 and Korean 🇰🇷 are supported for now.
+</span>
 <span class="font-bold mt-16 mb-4">Contents</span>
 <span>
     Current version has 10 Jokers, 2 Vouchers, and 4 Blinds. You can check the full list below.
