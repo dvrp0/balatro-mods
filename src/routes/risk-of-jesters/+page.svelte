@@ -1,10 +1,13 @@
 <script lang="ts">
     import { onMount } from "svelte";
+    import { MetaTags } from "svelte-meta-tags";
     import { GITHUB_RELEASE_API_URL, GITHUB_RELEASE_DOWNLOAD_URL } from "$lib/const";
     import { latest } from "$lib/store";
     import ContentEntry from "$components/ContentEntry.svelte";
     import IconList from "$components/IconList.svelte";
 
+    const title = "Risk of Jesters - DVRP's Balatro Mods";
+    const description = "Adds a bunch of Risk-of-Rain-themed Jokers, Vouchers, and Blinds.";
     const screenshots = Object.keys(import.meta.glob("/static/images/screenshots/risk-of-jesters/*.png", {
         eager: true
     })).map(x => x.replace("/static", ""));
@@ -28,6 +31,34 @@
                 .replace("{filename}", "RiskofJesters.zip"), "_blank");
     }
 </script>
+
+<MetaTags
+    {title}
+    {description}
+    canonical="https://dvrp-balatro-mods.pages.dev/risk-of-jesters"
+    openGraph={{
+        type: "website",
+        siteName: "DVRP's Balatro Mods",
+        url: "https://dvrp-balatro-mods.pages.dev/risk-of-jesters",
+        title,
+        description,
+        images: [
+            {
+                url: "/images/thumbnails/risk-of-jesters-og.png"
+            }
+        ]
+    }}
+    additionalMetaTags={[
+        {
+            property: "author",
+            content: "DVRP"
+        },
+        {
+            property: "theme-color",
+            content: "#ffffff"
+        }
+    ]}
+/>
 
 <div class="flex">
     <span class="font-bold">Risk of Jesters</span>
