@@ -18,9 +18,7 @@
         description,
         images: [
             {
-                url: "/images/thumbnails/main-og.png",
-                width: 1200,
-                height: 600
+                url: "https://dvrp-balatro-mods.pages.dev/images/thumbnails/main-og.png"
             }
         ]
     }}
@@ -29,7 +27,7 @@
         cardType: "summary_large_image",
         title,
         description,
-        image: "/images/thumbnails/main-og.png",
+        image: "https://dvrp-balatro-mods.pages.dev/images/thumbnails/main-og.png",
         imageAlt: "DVRP's Balatro Mods"
     }}
     additionalMetaTags={[

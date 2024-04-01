@@ -44,9 +44,7 @@
         description,
         images: [
             {
-                url: "/images/thumbnails/risk-of-jesters-og.png",
-                width: 1200,
-                height: 600
+                url: "https://dvrp-balatro-mods.pages.dev/images/thumbnails/risk-of-jesters-og.png"
             }
         ]
     }}
@@ -55,7 +53,7 @@
         cardType: "summary_large_image",
         title,
         description,
-        image: "/images/thumbnails/risk-of-jesters-og.png",
+        image: "https://dvrp-balatro-mods.pages.dev/images/thumbnails/risk-of-jesters-og.png",
         imageAlt: "Risk of Jesters - DVRP's Balatro Mods"
     }}
     additionalMetaTags={[
