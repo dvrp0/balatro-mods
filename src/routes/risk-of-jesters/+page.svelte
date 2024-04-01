@@ -44,9 +44,19 @@
         description,
         images: [
             {
-                url: "/images/thumbnails/risk-of-jesters-og.png"
+                url: "/images/thumbnails/risk-of-jesters-og.png",
+                width: 1200,
+                height: 600
             }
         ]
+    }}
+    twitter={{
+        handle: "@dvrp0_",
+        cardType: "summary_large_image",
+        title,
+        description,
+        image: "/images/thumbnails/risk-of-jesters-og.png",
+        imageAlt: "Risk of Jesters - DVRP's Balatro Mods"
     }}
     additionalMetaTags={[
         {

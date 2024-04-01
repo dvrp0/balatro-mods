@@ -18,9 +18,19 @@
         description,
         images: [
             {
-                url: "/images/thumbnails/main-og.png"
+                url: "/images/thumbnails/main-og.png",
+                width: 1200,
+                height: 600
             }
         ]
+    }}
+    twitter={{
+        handle: "@dvrp0_",
+        cardType: "summary_large_image",
+        title,
+        description,
+        image: "/images/thumbnails/main-og.png",
+        imageAlt: "DVRP's Balatro Mods"
     }}
     additionalMetaTags={[
         {
