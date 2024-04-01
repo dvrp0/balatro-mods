@@ -12,7 +12,7 @@
         .replace(/<sp>/g, "<span class='text-blue-500 font-bold'>")
         .replace(/<in>/g, "<span class='text-gray-400'>")
         .replace(/<xin>/g, "<span class='bg-gray-400 p-0.5 px-1.5 rounded-md text-white break-all'>")
-        .replace(/<c>/g, "<span class='font-mono text-sm'>")
+        .replace(/<c>/g, "<span class='font-mono text-sm whitespace-pre'>")
         .replace(/<\/>/g, "</span>");
 </script>
 

@@ -6,6 +6,7 @@
     import ContentEntry from "$components/ContentEntry.svelte";
     import Icon from "$components/Icon.svelte";
     import IconList from "$components/IconList.svelte";
+    import Rich from "$components/Rich.svelte";
 
     const title = "Risk of Jesters - DVRP's Balatro Mods";
     const description = "Adds a bunch of Risk-of-Rain-themed Jokers, Vouchers, and Blinds.";
@@ -74,12 +75,9 @@
 </div>
 <div class="flex mt-4">
     <button on:click={download}>
-        Download
-        {#if !tag}
-            ···
-        {:else}
-            {tag}
-        {/if}
+        {#key tag}
+            <Rich text="Download <c>{tag ?? "   ···"}</>"/>
+        {/key}
     </button>
     <button class="fit ml-2 bg-gray-200 hover:bg-gray-400" on:click={() => window.open("https://github.com/dvrp0/risk-of-jesters")}>
         <Icon kind="github" color="bg-gray-900" />
@@ -96,7 +94,7 @@
     and
     <a href="https://github.com/ethangreen-dev/lovely-injector/releases" target="_blank">Lovely</a>.`,
     `Download the mod and unzip it.`,
-    `Put <xin><c>RiskofJesters</></d> folder into <xin><c>C:\\Users\\(USER)\\AppData\\Roaming\\Balatro\\Mods</bu></>. Create the <xin><c>Mods</></> folder if it doesn't exist.`,
+    `Put <xin><c>RiskofJesters</></> folder into <xin><c>C:\\Users\\(USER)\\AppData\\Roaming\\Balatro\\Mods</></>. Create the <xin><c>Mods</></> folder if it doesn't exist.`,
 ]} />
 <span class="font-bold mt-16 mb-4">Languages</span>
 <span>
