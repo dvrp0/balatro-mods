@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount } from "svelte";
+    import { _ } from "svelte-i18n";
     import { MetaTags } from "svelte-meta-tags";
     import { GITHUB_RELEASE_API_URL, GITHUB_RELEASE_DOWNLOAD_URL } from "$lib/const";
     import { latest } from "$lib/store";
@@ -8,8 +9,8 @@
     import IconList from "$components/IconList.svelte";
     import Rich from "$components/Rich.svelte";
 
-    const title = "Risk of Jesters - DVRP's Balatro Mods";
-    const description = "Adds a bunch of Risk-of-Rain-themed Jokers, Vouchers, and Blinds.";
+    const title = $_("ror.title");
+    const description = $_("ror.description");
     const screenshots = Object.keys(import.meta.glob("/static/images/screenshots/risk-of-jesters/*.png", {
         eager: true
     })).map(x => x.replace("/static", ""));
@@ -40,7 +41,7 @@
     canonical="https://dvrp-balatro-mods.pages.dev/risk-of-jesters"
     openGraph={{
         type: "website",
-        siteName: "DVRP's Balatro Mods",
+        siteName: $_("meta.siteName"),
         url: "https://dvrp-balatro-mods.pages.dev/risk-of-jesters",
         title,
         description,
@@ -56,7 +57,7 @@
         title,
         description,
         image: "https://dvrp-balatro-mods.pages.dev/images/thumbnails/risk-of-jesters-og.png",
-        imageAlt: "Risk of Jesters - DVRP's Balatro Mods"
+        imageAlt: $_("ror.title")
     }}
     additionalMetaTags={[
         {
@@ -71,89 +72,92 @@
 />
 
 <div class="flex">
-    <span class="font-bold">Risk of Jesters</span>
+    <span class="font-bold">{$_("ror.name")}</span>
 </div>
 <div class="flex mt-4">
     <button on:click={download}>
         {#key tag}
-            <Rich text="Download <c>{tag ?? "   ···"}</>"/>
+            <Rich text={$_("misc.download", {
+                values: {
+                    version: `<c>${tag ?? '   ···'}</>`
+                }
+            })} />
         {/key}
     </button>
-    <button class="fit ml-2 bg-gray-200 hover:bg-gray-400" on:click={() => window.open("https://github.com/dvrp0/risk-of-jesters")}>
+    <button class="fit ml-2 bg-gray-200 hover:bg-gray-300" on:click={() => window.open("https://github.com/dvrp0/risk-of-jesters")}>
         <Icon kind="github" color="bg-gray-900" />
     </button>
 </div>
-<span class="mt-16">
-    New Jokers, Vouchers, and Blinds themed with the Risk of Rain franchise make their entrance, yet still retaining the feeling of vanilla Balatro.
-    The volume is not that big yet, but you can expect more to come as new DLC for Risk of Rain 2 is approaching...
-</span>
-<span class="font-bold mt-16 mb-4">Installation</span>
+<span class="mt-16">{$_("ror.intro")}</span>
+<span class="font-bold mt-16 mb-4">{$_("misc.installation")}</span>
 <IconList kind="sparkle" items={[
-    `Install
-    <a href="https://github.com/Steamopollys/Steamodded/releases" target="_blank">Steamodded</a>
-    and
-    <a href="https://github.com/ethangreen-dev/lovely-injector/releases" target="_blank">Lovely</a>.`,
-    `Download the mod and unzip it.`,
-    `Put <xin><c>RiskofJesters</></> folder into <xin><c>C:\\Users\\(USER)\\AppData\\Roaming\\Balatro\\Mods</></>. Create the <xin><c>Mods</></> folder if it doesn't exist.`,
+    $_("ror.install-1"),
+    $_("ror.install-2"),
+    $_("ror.install-3"),
 ]} />
-<span class="font-bold mt-16 mb-4">Languages</span>
-<span>
-    English 🇬🇧 and Korean 🇰🇷 are supported for now.
-</span>
-<span class="font-bold mt-16 mb-4">Contents</span>
-<span>
-    Current version has 10 Jokers, 2 Vouchers, and 4 Blinds. You can check the full list below.
-</span>
+<span class="font-bold mt-16 mb-4">{$_("misc.languages")}</span>
+<span>{$_("ror.languages")}</span>
+<span class="font-bold mt-16 mb-4">{$_("misc.contents")}</span>
+<span>{$_("ror.contents", {
+    values: {
+        jokers: 10,
+        vouchers: 2,
+        blinds: 4
+    }
+})}</span>
 <div class="grid grid-cols-1 mt-4 gap-4">
-    <ContentEntry name="Bustling Fungus" type="Common Joker" cost={6} image="/images/jokers/j_bungus.png"
-        description="After <at>5</> rounds, add <ed>Foil</> to base edition Jokers on both sides<br>
-            <in>(Currently <at>0</>/5)</>" />
-    <ContentEntry name="Snake Eyes" type="Common Joker" cost={5} image="/images/jokers/j_snake_eyes.png"
-        description="Gains <mult>+6</> Mult if <tr>The Wheel of Fortune</> fails<br>
-            <in>(Currently <mult>+2</> Mult)</>" />
-    <ContentEntry name="Lepton Daisy" type="Uncommon Joker" cost={6} image="/images/jokers/j_daisy.png"
-        description="<chip>+50</> Chips for each <at>debuffed</> card in played hand" />
-    <ContentEntry name="Kjaro's Band" type="Uncommon Joker" cost={5} image="/images/jokers/j_kjaro.png"
-        description="<xmult>X4</> Mult if Chips scored in last round were more than <at>X4</> of required Chips" />
-    <ContentEntry name="Substandard Duplicator" type="Rare Joker" cost={10} image="/images/jokers/j_duplicator.png"
-        description="When gain a <at>Joker</>, create a <ed>Negative Temporary</> copy of it<br>
-            <xin>Temporary</><in> : Gets destroyed at end of round and has no sell value</>" />
-    <ContentEntry name="Happiest Mask" type="Rare Joker" cost={9} image="/images/jokers/j_happiest_mask.png"
-        description="<gr>1 in 2</> chance to create a random <sp>Spectral</> card when any card is destroyed<br>
-            <in>(Must have room)</>" />
-    <ContentEntry name="Benthic Bloom" type="Rare Joker" cost={8} image="/images/jokers/j_benthic.png"
-        description="Upgrade <at>1</> random <at>Joker</> into <at>Joker</> of the next <at>higher rarity</> when <at>Boss Blind</> is defeated" />
-    <ContentEntry name="Encrusted Key" type="Common Joker" cost={5} image="/images/jokers/j_encrusted.png"
-        description="After defeating the <at>Boss Blind</>, this card is destroyed and gain a <at>Coupon Tag</>" />
-    <ContentEntry name="Egocentrism" type="Common Joker" cost={4} image="/images/jokers/j_egocentrism.png"
-        description="<chip>+40</> Chips for each <at>Egocentrism</>. Convert a random <at>Joker</> into <at>Egocentrism</> when <at>Blind</> is selected<br>
-            <in>(Currently <chip>+40</> Chips)</>" />
-    <ContentEntry name="Eulogy Zero" type="Uncommon Joker" cost={5} image="/images/jokers/j_eulogy.png"
-        description="<at>Shop</> cards have <gr>1 in 4</> chance of being <at>half price</> and <at>flipped</>" />
+    <ContentEntry name={$_("ror.bungus.name")} type={$_("misc.commonJoker")} cost={6} image="/images/jokers/j_bungus.png"
+        description={$_("ror.bungus.description")} />
+    <ContentEntry name={$_("ror.snake_eyes.name")} type={$_("misc.commonJoker")} cost={5} image="/images/jokers/j_snake_eyes.png"
+        description={$_("ror.snake_eyes.description")} />
+    <ContentEntry name={$_("ror.daisy.name")} type={$_("misc.uncommonJoker")} cost={6} image="/images/jokers/j_daisy.png"
+        description={$_("ror.daisy.description")} />
+    <ContentEntry name={$_("ror.kjaro.name")} type={$_("misc.uncommonJoker")} cost={5} image="/images/jokers/j_kjaro.png"
+        description={$_("ror.kjaro.description")} />
+    <ContentEntry name={$_("ror.duplicator.name")} type={$_("misc.rareJoker")} cost={10} image="/images/jokers/j_duplicator.png"
+        description={$_("ror.duplicator.description")} />
+    <ContentEntry name={$_("ror.happiest.name")} type={$_("misc.rareJoker")} cost={9} image="/images/jokers/j_happiest_mask.png"
+        description={$_("ror.happiest.description")} />
+    <ContentEntry name={$_("ror.benthic.name")} type={$_("misc.rareJoker")} cost={8} image="/images/jokers/j_benthic.png"
+        description={$_("ror.benthic.description")} />
+    <ContentEntry name={$_("ror.encrusted.name")} type={$_("misc.commonJoker")} cost={5} image="/images/jokers/j_encrusted.png"
+        description={$_("ror.encrusted.description")} />
+    <ContentEntry name={$_("ror.egocentrism.name")} type={$_("misc.commonJoker")} cost={4} image="/images/jokers/j_egocentrism.png"
+        description={$_("ror.egocentrism.description")} />
+    <ContentEntry name={$_("ror.eulogy.name")} type={$_("misc.uncommonJoker")} cost={5} image="/images/jokers/j_eulogy.png"
+        description={$_("ror.eulogy.description")} />
 </div>
 <div class="grid grid-cols-1 mt-16 gap-4">
-    <ContentEntry name="3D Printer" type="Voucher" cost={10} image="/images/vouchers/v_3d_printer.png"
-        description="All <at>Booster Packs</> have <at>1</> more option" />
-    <ContentEntry name="Mili-Tech Printer" type="Upgraded Voucher" cost={10} image="/images/vouchers/v_militech_printer.png"
-        description="Can choose <at>1</> more card from all <at>Booster Packs</>" />
+    <ContentEntry name={$_("ror.3d.name")} type={$_("misc.voucher")} cost={10} image="/images/vouchers/v_3d_printer.png"
+        description={$_("ror.3d.description")} />
+    <ContentEntry name={$_("ror.mili.name")} type={$_("misc.upgradedVoucher")} cost={10} image="/images/vouchers/v_militech_printer.png"
+        description={$_("ror.mili.description")} />
 </div>
 <div class="grid grid-cols-1 mt-16 gap-4">
-    <ContentEntry name="The Loop" type="Boss Blind" tag="Appear from Ante 1" image="/images/blinds/bl_loop.png"
-        description="Random Joker disabled after playing 2 hands" />
-    <ContentEntry name="The Void" type="Boss Blind" tag="Appear from Ante 1" image="/images/blinds/bl_void.png"
-        description="Set all Jokers' sell value to 0 when defeated" />
-    <ContentEntry name="Glaucous Hammer" type="Final Boss Blind" image="/images/blinds/bl_final_hammer.png"
-        description="Start with random half of the deck debuffed" />
-    <ContentEntry name="Tyrian Crab" type="Final Boss Blind" image="/images/blinds/bl_final_crab.png"
-        description="X1.5 required Chips after each hand played" />
+    <ContentEntry name={$_("ror.loop.name")} type={$_("misc.bossBlind")} tag={$_("misc.bossAppear", {
+        values: {
+            ante: 1
+        }
+    })} image="/images/blinds/bl_loop.png"
+        description={$_("ror.loop.description")} />
+    <ContentEntry name={$_("ror.void.name")} type={$_("misc.bossBlind")} tag={$_("misc.bossAppear", {
+        values: {
+            ante: 1
+        }
+    })} image="/images/blinds/bl_void.png"
+        description={$_("ror.void.description")} />
+    <ContentEntry name={$_("ror.hammer.name")} type={$_("misc.finalBlind")} image="/images/blinds/bl_final_hammer.png"
+        description={$_("ror.hammer.description")} />
+    <ContentEntry name={$_("ror.crab.name")} type={$_("misc.finalBlind")} image="/images/blinds/bl_final_crab.png"
+        description={$_("ror.crab.description")} />
 </div>
-<span class="font-bold mt-16 mb-4">Screenshots</span>
+<span class="font-bold mt-16 mb-4">{$_("misc.screenshots")}</span>
 <div class="grid grid-cols-1 mt-4 gap-4 *:rounded-xl">
     {#each screenshots as src}
         <img {src} alt="Risk of Jesters Screenshot" loading="lazy" />
     {/each}
 </div>
-<span class="font-bold mt-16 mb-4">Changelog</span>
+<span class="font-bold mt-16 mb-4">{$_("misc.changelog")}</span>
 <IconList kind="sparkle" items={[
-    `<xin><c>v0.1.0</></> : Mod released.`
+    `<xin><c>v0.1.0</></> : ${$_("ror.changelog.0-1-0")}`
 ]} />

@@ -1,9 +1,10 @@
 <script lang="ts">
+    import { _ } from "svelte-i18n";
     import { MetaTags } from "svelte-meta-tags";
     import ModEntry from "$components/ModEntry.svelte";
 
-    const title = "DVRP's Balatro Mods";
-    const description = "A collection of my mods for the game Balatro.";
+    const title = $_("meta.siteName");
+    const description = $_("meta.description");
 </script>
 
 <MetaTags
@@ -12,7 +13,7 @@
     canonical="https://dvrp-balatro-mods.pages.dev"
     openGraph={{
         type: "website",
-        siteName: "DVRP's Balatro Mods",
+        siteName: $_("meta.siteName"),
         url: "https://dvrp-balatro-mods.pages.dev",
         title,
         description,
@@ -28,7 +29,7 @@
         title,
         description,
         image: "https://dvrp-balatro-mods.pages.dev/images/thumbnails/main-og.png",
-        imageAlt: "DVRP's Balatro Mods"
+        imageAlt: $_("meta.siteName")
     }}
     additionalMetaTags={[
         {
@@ -43,6 +44,6 @@
 />
 
 <div class="mt-16 grid grid-cols-1 gap-4">
-    <ModEntry id="risk-of-jesters" image="/images/thumbnails/risk-of-jesters.png" title="Risk of Jesters"
-        description="Adds a bunch of Risk-of-Rain-themed Jokers, Vouchers, and Blinds." />
+    <ModEntry id="risk-of-jesters" image="/images/thumbnails/risk-of-jesters.png" title={$_("ror.name")}
+        description={$_("ror.description")} />
 </div>

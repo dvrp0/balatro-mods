@@ -1,0 +1,103 @@
+{
+    "meta": {
+        "siteName": "발라트로 모드를 만듭니다",
+        "description": "제가 제작한 발라트로 모드들이 모여 있습니다."
+    },
+    "misc": {
+        "download": "{version} 다운로드",
+        "installation": "설치",
+        "languages": "언어",
+        "contents": "컨텐츠",
+        "screenshots": "스크린샷",
+        "changelog": "업데이트 내역",
+        "commonJoker": "일반 조커",
+        "uncommonJoker": "희귀 조커",
+        "rareJoker": "레어 조커",
+        "legendaryJoker": "레전더리 조커",
+        "bossBlind": "보스 블라인드",
+        "bossAppear": "앤티 단계 {ante}부터 등장",
+        "finalBlind": "최종 보스 블라인드",
+        "voucher": "바우처",
+        "upgradedVoucher": "상위 바우처",
+        "pack": "부스터 팩",
+        "consumable": "소모품"
+    },
+    "ror": {
+        "title": "리스크 오브 제스터 - 발라트로 모드를 만듭니다",
+        "description": "리스크 오브 레인 테마의 조커와 바우처, 블라인드를 추가합니다.",
+        "name": "리스크 오브 제스터",
+        "intro": "기존 발라트로의 느낌을 유지하면서도 리스크 오브 레인 프랜차이즈의 테마를 가진 새로운 조커와 바우처, 블라인드가 추가됩니다. 아직 추가되는 요소의 양이 많지 않지만 리스크 오브 레인 2의 신규 DLC가 출시되면 이 모드 또한 업데이트될 예정입니다.",
+        "install-1": "<a href=\"https://github.com/Steamopollys/Steamodded/releases\" target=\"_blank\">Steamodded</a>와 <a href=\"https://github.com/ethangreen-dev/lovely-injector/releases\" target=\"_blank\">Lovely</a>를 설치합니다.",
+        "install-2": "모드를 다운로드받고 압축 해체합니다.",
+        "install-3": "<xin><c>RiskofJesters</></> 폴더를 <xin><c>C:\\Users\\(USER)\\AppData\\Roaming\\Balatro\\Mods</></> 경로로 옮깁니다. <xin><c>Mods</></> 폴더가 없다면 만들어 주세요.",
+        "languages": "영어 🇬🇧 와 한국어 🇰🇷 가 지원됩니다.",
+        "contents": "현재 버전에는 조커 {jokers}장, 바우처 {vouchers}장, 블라인드 {blinds}개가 포함되어 있습니다. 아래에서 전체 목록을 확인해 보세요.",
+        "changelog": {
+            "0-1-0": "모드 출시"
+        },
+        "bungus": {
+            "name": "뿜뿜 버섯",
+            "description": "<at>5</> 라운드 후 양옆의 에디션 없는 조커들에 <ed>포일</>을 추가합니다<br><in>(현재 <at>0</>/5 라운드)</>"
+        },
+        "snake_eyes": {
+            "name": "뱀의 눈",
+            "description": "<tr>운명의 수레바퀴</> 발동에 실패하면 배수 획득량이 <mult>+6</> 증가합니다<br><in>(현재 <mult>+2</> 배수)</>"
+        },
+        "daisy": {
+            "name": "렙톤 데이지",
+            "description": "플레이한 핸드에 포함된 <at>디버프</>된 카드마다 칩 <chip>+50</>개를 획득합니다"
+        },
+        "kjaro": {
+            "name": "캬로의 반지",
+            "description": "이전 라운드에서 획득한 칩이 필요한 칩의 <at>4</>배 이상이었다면 <xmult>X4</> 배수를 획득합니다"
+        },
+        "duplicator": {
+            "name": "하급 복제 장치",
+            "description": "<at>조커</>를 획득하면 <ed>네거티브 임시</> 복사본을 생성합니다<br><xin>임시</><in> : 라운드 종료 시 파괴되고 판매 가치가 없습니다</>"
+        },
+        "happiest": {
+            "name": "행복한 가면",
+            "description": "카드가 파괴될 때마다 <gr>1/2</> 확률로 <sp>유령</> 카드를 생성합니다<br><in>(공간이 있어야 합니다)</>"
+        },
+        "benthic": {
+            "name": "물속의 꽃",
+            "description": "<at>보스 블라인드</>에 승리하면 무작위 <at>조커 1</>장을 한 단계 <at>높은 등급</>의 <at>조커</>로 업그레이드합니다"
+        },
+        "encrusted": {
+            "name": "뭔가에 덮여 있는 열쇠",
+            "description": "<at>보스 블라인드</>에 승리하면 <at>쿠폰 태그</>를 획득하고 이 카드를 파괴합니다"
+        },
+        "egocentrism": {
+            "name": "자기중심성",
+            "description": "<at>자기중심성</> 하나마다 칩 <chip>+40</>개를 획득합니다. <at>블라인드</>를 선택하면 무작위 <at>조커</>를 <at>자기중심성</>으로 전환합니다<br><in>(현재 칩 <chip>+40</>개)</>"
+        },
+        "eulogy": {
+            "name": "0의 찬미가",
+            "description": "<at>상점</> 카드들이 <gr>1/4</> 확률로 가격이 <at>절반</>이 되고 <at>뒤집혀서</> 나타납니다"
+        },
+        "3d": {
+            "name": "3D 프린터",
+            "description": "모든 <at>부스터 팩</>에서 카드 <at>1</>장이 추가로 제시됩니다"
+        },
+        "mili": {
+            "name": "군용 프린터",
+            "description": "모든 <at>부스터 팩</>에서 카드 <at>1</>장을 추가로 선택할 수 있습니다"
+        },
+        "loop": {
+            "name": "고리",
+            "description": "핸드를 2번 플레이하면 무작위 조커가 비활성화됩니다"
+        },
+        "void": {
+            "name": "공허",
+            "description": "승리하면 모든 조커의 판매 가치가 0이 됩니다"
+        },
+        "hammer": {
+            "name": "청회색 망치",
+            "description": "덱의 무작위 절반이 디버프되고 시작합니다"
+        },
+        "crab": {
+            "name": "자주색 게",
+            "description": "각 핸드 플레이 후 칩 요구량이 1.5배 증가합니다"
+        }
+    }
+}

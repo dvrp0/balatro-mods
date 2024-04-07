@@ -16,11 +16,9 @@ const config = {
     alias: {
       $components: path.resolve("./src/components"),
       $assets: path.resolve("./src/assets"),
-    },
-    prerender: {
-      concurrency: 10,
-    },
-  },
+      $lib: path.resolve("./src/lib")
+    }
+  }
 };
 
 export default config;
