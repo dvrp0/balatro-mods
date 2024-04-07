@@ -30,10 +30,16 @@
         "install-1": "<a href=\"https://github.com/Steamopollys/Steamodded/releases\" target=\"_blank\">Steamodded</a>와 <a href=\"https://github.com/ethangreen-dev/lovely-injector/releases\" target=\"_blank\">Lovely</a>를 설치합니다.",
         "install-2": "모드를 다운로드받고 압축 해체합니다.",
         "install-3": "<xin><c>RiskofJesters</></> 폴더를 <xin><c>C:\\Users\\(USER)\\AppData\\Roaming\\Balatro\\Mods</></> 경로로 옮깁니다. <xin><c>Mods</></> 폴더가 없다면 만들어 주세요.",
-        "languages": "영어 🇬🇧 와 한국어 🇰🇷 가 지원됩니다.",
+        "languages": {
+            "description": "다음 언어들이 지원됩니다.",
+            "en": "영어 🇬🇧",
+            "ko": "한국어 🇰🇷",
+            "ru": "러시아어 🇷🇺 (<xin><c>@НЕШКО</></> 제작)"
+        },
         "contents": "현재 버전에는 조커 {jokers}장, 바우처 {vouchers}장, 블라인드 {blinds}개가 포함되어 있습니다. 아래에서 전체 목록을 확인해 보세요.",
         "changelog": {
-            "0-1-0": "모드 출시"
+            "0-1-0": "모드 출시",
+            "0-1-1": "Steamodded 모드 뱃지를 이제 정상적으로 표시, 러시아어 번역(<xin><c>@НЕШКО</></> 제작) 추가, 일부 조커의 컬렉션 배치 순서를 올바르게 수정, 0의 찬미가의 능력 발동 확률을 1/2로 변경"
         },
         "bungus": {
             "name": "뿜뿜 버섯",
@@ -73,7 +79,7 @@
         },
         "eulogy": {
             "name": "0의 찬미가",
-            "description": "<at>상점</> 카드들이 <gr>1/4</> 확률로 가격이 <at>절반</>이 되고 <at>뒤집혀서</> 나타납니다"
+            "description": "<at>상점</> 카드들이 <gr>1/2</> 확률로 가격이 <at>절반</>이 되고 <at>뒤집혀서</> 나타납니다"
         },
         "3d": {
             "name": "3D 프린터",
