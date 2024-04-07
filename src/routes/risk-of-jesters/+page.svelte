@@ -21,8 +21,7 @@
         const response = await fetch(GITHUB_RELEASE_API_URL.replace("{repo}", "risk-of-jesters"))
             .then(result => result.json());
 
-        $latest["risk-of-jesters"] = response["tag_name"];
-        tag = response["tag_name"];
+        tag = $latest["risk-of-jesters"] = response["tag_name"];
     });
 
     function download()
@@ -84,7 +83,7 @@
             })} />
         {/key}
     </button>
-    <button class="fit ml-2 bg-gray-200 hover:bg-gray-300" on:click={() => window.open("https://github.com/dvrp0/risk-of-jesters")}>
+    <button class="fit ml-2 bg-gray-100 hover:bg-gray-200" on:click={() => window.open("https://github.com/dvrp0/risk-of-jesters")}>
         <Icon kind="github" color="bg-gray-900" />
     </button>
 </div>
