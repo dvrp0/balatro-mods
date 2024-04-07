@@ -96,7 +96,7 @@
     $_("ror.install-3"),
 ]} />
 <span class="font-bold mt-16 mb-4">{$_("misc.languages")}</span>
-<span>{$_("ror.languages.description")}</span>
+<span class="mb-4">{$_("ror.languages.description")}</span>
 <IconList kind="sparkle" items={[
     $_("ror.languages.en"),
     $_("ror.languages.ko"),
@@ -164,6 +164,6 @@
 </div>
 <span class="font-bold mt-16 mb-4">{$_("misc.changelog")}</span>
 <IconList kind="sparkle" items={[
-    `<xin><c>v0.1.0</></> : ${$_("ror.changelog.0-1-1")}`,
+    `<xin><c>v0.1.1</></> : ${$_("ror.changelog.0-1-1")}`,
     `<xin><c>v0.1.0</></> : ${$_("ror.changelog.0-1-0")}`
 ]} />
