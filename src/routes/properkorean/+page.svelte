@@ -18,16 +18,14 @@
         eager: true
     })).map(x => x.replace("/static", ""));
 
-    let tag = $latest?.["properkorean"] ?? undefined;
-
     onMount(async () => {
         const response = await fetch(GITHUB_RELEASE_API_URL.replace("{repo}", "ProperKorean-Balatro"))
             .then(result => result.json());
 
-        tag = $latest["properkorean"] = response["tag_name"];
+        $latest["properkorean"] = response["tag_name"];
     });
 
-    function download()
+    function download(tag: string)
     {
         if (tag)
             window.open(GITHUB_RELEASE_DOWNLOAD_URL
@@ -77,19 +75,31 @@
     <span class="font-bold">{$_("kor.name")}</span>
 </div>
 <div class="flex mt-4">
-    <button on:click={download}>
-        {#key tag}
-            <Rich text={$_("misc.download", {
-                values: {
-                    version: `<c>${tag ?? '   ···'}</>`
-                }
-            })} />
-        {/key}
-    </button>
+    <div class="flex flex-col w-full sm:flex-row">
+        <button class="w-full px-0" on:click={() => download($latest["properkorean"])}>
+            {#key $latest}
+                <Rich text={$_("misc.download", {
+                    values: {
+                        version: `<c>${$latest["properkorean"] ?? '   ···'}</>`
+                    }
+                })} />
+            {/key}
+        </button>
+        <button class="w-full px-0 mt-2 sm:mt-0 sm:ml-2 bg-orange-600 hover:bg-orange-500" on:click={() => download("v0.5.0-beta.1")}>
+            {#key $latest}
+                <Rich text={$_("misc.download", {
+                    values: {
+                        version: `<c>${"v0.5.0-beta.1" ?? '   ···'}</>`
+                    }
+                })} />
+            {/key}
+        </button>
+    </div>
     <button class="fit ml-2 bg-gray-100 hover:bg-gray-200" on:click={() => window.open("https://github.com/dvrp0/ProperKorean-Balatro")}>
         <Icon kind="github" color="bg-gray-900" />
     </button>
 </div>
+<div class="mt-4" />
 <span class="mt-16">{$_("kor.intro")}</span>
 <span class="font-bold mt-16 mb-4">{$_("misc.installation")}</span>
 <Comment>
