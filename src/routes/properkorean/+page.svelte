@@ -85,11 +85,11 @@
                 })} />
             {/key}
         </button>
-        <button class="w-full px-0 mt-2 sm:mt-0 sm:ml-2 bg-orange-600 hover:bg-orange-500" on:click={() => download("v0.5.0-beta.1")}>
+        <button class="w-full px-0 mt-2 sm:mt-0 sm:ml-2 bg-orange-600 hover:bg-orange-500" on:click={() => download("v0.5.0-beta.2")}>
             {#key $latest}
                 <Rich text={$_("misc.download", {
                     values: {
-                        version: `<c>${"v0.5.0-beta.1" ?? '   ···'}</>`
+                        version: `<c>${"v0.5.0-beta.2" ?? '   ···'}</>`
                     }
                 })} />
             {/key}
