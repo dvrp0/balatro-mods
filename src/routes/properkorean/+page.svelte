@@ -85,7 +85,7 @@
                 })} />
             {/key}
         </button>
-        <button class="w-full px-0 mt-2 sm:mt-0 sm:ml-2 bg-orange-600 hover:bg-orange-500" on:click={() => download("v0.5.0-beta.2")}>
+        <!-- <button class="w-full px-0 mt-2 sm:mt-0 sm:ml-2 bg-orange-600 hover:bg-orange-500" on:click={() => download("v0.5.0-beta.2")}>
             {#key $latest}
                 <Rich text={$_("misc.download", {
                     values: {
@@ -93,7 +93,7 @@
                     }
                 })} />
             {/key}
-        </button>
+        </button> -->
     </div>
     <button class="fit ml-2 bg-gray-100 hover:bg-gray-200" on:click={() => window.open("https://github.com/dvrp0/ProperKorean-Balatro")}>
         <Icon kind="github" color="bg-gray-900" />
@@ -139,6 +139,7 @@
 </div>
 <span class="font-bold mt-16 mb-4">{$_("misc.changelog")}</span>
 <IconList kind="sparkle" items={[
+    `<xin><c>v0.5.0</></> : ${$_("kor.changelog.0-5-0")}`,
     `<xin><c>v0.4.1</></> : ${$_("kor.changelog.0-4-1")}`,
     `<xin><c>v0.4.0</></> : ${$_("kor.changelog.0-4-0")}`,
     `<xin><c>v0.3.22</></> : ${$_("kor.changelog.0-3-22")}`,
