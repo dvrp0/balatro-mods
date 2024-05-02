@@ -17,6 +17,7 @@
     const screenshots = Object.keys(import.meta.glob("/static/images/screenshots/properkorean/*.webp", {
         eager: true
     })).map(x => x.replace("/static", ""));
+    const beta: string | undefined = undefined
 
     onMount(async () => {
         const response = await fetch(GITHUB_RELEASE_API_URL.replace("{repo}", "ProperKorean-Balatro"))
@@ -75,8 +76,8 @@
     <span class="font-bold">{$_("kor.name")}</span>
 </div>
 <div class="flex mt-4">
-    <div class="flex flex-col w-full sm:flex-row">
-        <button class="w-full px-0" on:click={() => download($latest["properkorean"])}>
+    <div class="flex flex-col {beta ? "w-full" : ""} sm:flex-row">
+        <button class={beta ? "w-full px-0" : ""} on:click={() => download($latest["properkorean"])}>
             {#key $latest}
                 <Rich text={$_("misc.download", {
                     values: {
@@ -85,15 +86,17 @@
                 })} />
             {/key}
         </button>
-        <!-- <button class="w-full px-0 mt-2 sm:mt-0 sm:ml-2 bg-orange-600 hover:bg-orange-500" on:click={() => download("v0.5.0-beta.2")}>
-            {#key $latest}
-                <Rich text={$_("misc.download", {
-                    values: {
-                        version: `<c>${"v0.5.0-beta.2" ?? '   ···'}</>`
-                    }
-                })} />
-            {/key}
-        </button> -->
+        {#if beta}
+            <button class="w-full px-0 mt-2 sm:mt-0 sm:ml-2 bg-orange-600 hover:bg-orange-500" on:click={() => download(beta)}>
+                {#key $latest}
+                    <Rich text={$_("misc.download", {
+                        values: {
+                            version: `<c>${beta ?? "   ···"}</>`
+                        }
+                    })} />
+                {/key}
+            </button>
+        {/if}
     </div>
     <button class="fit ml-2 bg-gray-100 hover:bg-gray-200" on:click={() => window.open("https://github.com/dvrp0/ProperKorean-Balatro")}>
         <Icon kind="github" color="bg-gray-900" />
