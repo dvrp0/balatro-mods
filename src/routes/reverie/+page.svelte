@@ -93,7 +93,7 @@
         {#key tag}
             <Rich text={$_("misc.download", {
                 values: {
-                    version: `<c>${tag ?? '   ···'}</L>`
+                    version: `<c>${tag ?? '   ···'}</>`
                 }
             })} />
         {/key}
