@@ -11,8 +11,8 @@
     import LargeImageViewer from "$components/LargeImageViewer.svelte";
     import Rich from "$components/Rich.svelte";
 
-    const title = $_("ror.title");
-    const description = $_("ror.description");
+    const title = $_("reverie.title");
+    const description = $_("reverie.description");
     const screenshots = Object.keys(import.meta.glob("/static/images/screenshots/reverie/*.*", {
         eager: true
     }))
@@ -98,7 +98,7 @@
             })} />
         {/key}
     </button>
-    <button class="fit ml-2 bg-gray-100 hover:bg-gray-200" on:click={() => window.open("https://github.com/dvrp0/risk-of-jesters")}>
+    <button class="fit ml-2 bg-gray-100 hover:bg-gray-200" on:click={() => window.open("https://github.com/dvrp0/reverie")}>
         <Icon kind="github" color="bg-gray-900" />
     </button>
 </div>
