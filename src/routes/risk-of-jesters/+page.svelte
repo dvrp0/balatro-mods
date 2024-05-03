@@ -163,6 +163,7 @@
 </div>
 <span class="font-bold mt-16 mb-4">{$_("misc.changelog")}</span>
 <IconList kind="sparkle" items={[
+    `<xin><c>v0.1.2</></> : ${$_("ror.changelog.0-1-2")}`,
     `<xin><c>v0.1.1</></> : ${$_("ror.changelog.0-1-1")}`,
     `<xin><c>v0.1.0</></> : ${$_("ror.changelog.0-1-0")}`
 ]} />

@@ -42,7 +42,8 @@
         "contents": "Current version has {jokers} Jokers, {vouchers} Vouchers, and {blinds} Blinds. You can check the full list below.",
         "changelog": {
             "0-1-0": "Mod released.",
-            "0-1-1": "Now properly displays Steamodded mod badge, added Russian translation done by <xin><c>@НЕШКО</></>, fixed incorrect collection page ordering of some Jokers, and changed Eulogy Zero's ability to have 1 in 2 chance."
+            "0-1-1": "Now properly displays Steamodded mod badge, added Russian translation done by <xin><c>@НЕШКО</></>, fixed incorrect collection page ordering of some Jokers, and changed Eulogy Zero's ability to have 1 in 2 chance.",
+            "0-1-2": "Fixed imcompatibility with other modded Jokers."
         },
         "bungus": {
             "name": "Bustling Fungus",
@@ -158,7 +159,8 @@
         "contents": "Current version has <cine>{cines} Cines</>, <at>{jokers} Jokers</>, <at>{backs} Decks</>, <at>{boosters} Booster Packs</>, and <at>{tags} Tags</>.",
         "changelog": {
             "1-0-0": "🎉 Mod released",
-            "1-0-1": "🔧 Fixed a bug where completing Exchange Coupon may crashed the game|🔧 Fixed a bug where Cine slot doesn't get affected by screenshake|🔧 Fixed some minor wording"
+            "1-0-1": "🔧 Fixed a bug where completing Exchange Coupon may crashed the game|🔧 Fixed a bug where Cine slot doesn't get affected by screenshake|🔧 Fixed some minor wording",
+            "1-0-2": "🔧 Added compatibility with DX Boosters|🔧 Fixed a bug where Filmstrip Deck doesn't give additional Cine slot|🔧 Fixed imcompatibility with other modded Jokers"
         },
         "cines-1": "<cine>Cine</> cards are new type of consumables that can temporarily spice up your shop. To get them, you first need to earn <cine>Exchange Coupons</> from Booster Packs or Tags.",
         "cines-2": "They are some sort of quests that will turn into Cine card once you complete the requirements. In rare cases, you can get Cine card directly without going through quests.",

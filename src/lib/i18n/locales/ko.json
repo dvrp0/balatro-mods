@@ -39,7 +39,8 @@
         "contents": "현재 버전에는 조커 {jokers}장, 바우처 {vouchers}장, 블라인드 {blinds}개가 포함되어 있습니다. 아래에서 전체 목록을 확인해 보세요.",
         "changelog": {
             "0-1-0": "모드 출시",
-            "0-1-1": "Steamodded 모드 뱃지를 이제 정상적으로 표시, 러시아어 번역(<xin><c>@НЕШКО</></> 제작) 추가, 일부 조커의 컬렉션 배치 순서를 올바르게 수정, 0의 찬미가의 능력 발동 확률을 1/2로 변경"
+            "0-1-1": "Steamodded 모드 뱃지를 이제 정상적으로 표시, 러시아어 번역(<xin><c>@НЕШКО</></> 제작) 추가, 일부 조커의 컬렉션 배치 순서를 올바르게 수정, 0의 찬미가의 능력 발동 확률을 1/2로 변경",
+            "0-1-2": "다른 모드 조커와의 비호환성 수정"
         },
         "bungus": {
             "name": "뿜뿜 버섯",
@@ -155,7 +156,8 @@
         "contents": "Current version has <cine>{cines} Cines</>, <at>{jokers} Jokers</>, <at>{backs} Decks</>, <at>{boosters} Booster Packs</>, and <at>{tags} Tags</>.",
         "changelog": {
             "1-0-0": "🎉 Mod released",
-            "1-0-1": "🔧 Fixed a bug where completing Exchange Coupon may crashed the game|🔧 Fixed a bug where Cine slot doesn't get affected by screenshake|🔧 Fixed some minor wording"
+            "1-0-1": "🔧 Fixed a bug where completing Exchange Coupon may crashed the game|🔧 Fixed a bug where Cine slot doesn't get affected by screenshake|🔧 Fixed some minor wording",
+            "1-0-2": "🔧 Added compatibility with DX Boosters|🔧 Fixed a bug where Filmstrip Deck doesn't give additional Cine slot|🔧 Fixed imcompatibility with other modded Jokers"
         },
         "cines-1": "<cine>Cine</> cards are new type of consumables that can temporarily spice up your shop. To get them, you first need to earn <cine>Exchange Coupons</> from Booster Packs or Tags.",
         "cines-2": "They are some sort of quests that will turn into Cine card once you complete the requirements. In rare cases, you can get Cine card directly without going through quests.",
