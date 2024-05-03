@@ -157,7 +157,8 @@
         },
         "contents": "Current version has <cine>{cines} Cines</>, <at>{jokers} Jokers</>, <at>{backs} Decks</>, <at>{boosters} Booster Packs</>, and <at>{tags} Tags</>.",
         "changelog": {
-            "1-0-0": "🎉 Mod released"
+            "1-0-0": "🎉 Mod released",
+            "1-0-1": "🔧 Fixed a bug where completing Exchange Coupon may crashed the game|🔧 Fixed a bug where Cine slot doesn't get affected by screenshake|🔧 Fixed some minor wording"
         },
         "cines-1": "<cine>Cine</> cards are new type of consumables that can temporarily spice up your shop. To get them, you first need to earn <cine>Exchange Coupons</> from Booster Packs or Tags.",
         "cines-2": "They are some sort of quests that will turn into Cine card once you complete the requirements. In rare cases, you can get Cine card directly without going through quests.",

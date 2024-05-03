@@ -218,5 +218,6 @@
 </div>
 <span class="font-bold mt-16 mb-4">{$_("misc.changelog")}</span>
 <IconList kind="sparkle" items={[
+    `<xin><c>v1.0.1</></><br>${$_("reverie.changelog.1-0-1").split("|").join("<br>")}`,
     `<xin><c>v1.0.0</></><br>${$_("reverie.changelog.1-0-0").split("|").join("<br>")}`
 ]} />
