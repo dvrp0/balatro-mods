@@ -6,7 +6,14 @@ const config = {
     fontFamily: {
         "mono": ["JetBrains Mono", "monospace"]
     },
-    extend: {},
+    extend: {
+        "colors": {
+            "cine": {
+                "300": "#a7b38f",
+                "500": "#92ab5c",
+            }
+        }
+    },
   },
 
   plugins: [],

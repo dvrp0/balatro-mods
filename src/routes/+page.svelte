@@ -44,6 +44,8 @@
 />
 
 <div class="mt-16 grid grid-cols-1 gap-4">
+    <ModEntry id="reverie" image="/images/thumbnails/reverie.png" title={$_("reverie.name")}
+        description={$_("reverie.description")} />
     <ModEntry id="properkorean" image="/images/thumbnails/properkorean.png" title={$_("kor.name")}
         description={$_("kor.description")} />
     <ModEntry id="risk-of-jesters" image="/images/thumbnails/risk-of-jesters.png" title={$_("ror.name")}
