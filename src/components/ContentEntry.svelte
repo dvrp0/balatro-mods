@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { _ } from "svelte-i18n";
     import { fade } from "svelte/transition";
     import Icon from "$components/Icon.svelte";
     import Rich from "$components/Rich.svelte";
@@ -11,14 +12,22 @@
     export let image: string | string[];
     export let smallImage = false;
     export let imageCycleFlag: number | undefined = undefined;
+    export let spoiler = false;
 
     let imageIndex = 0;
+    let reveal = false;
 
     $: imageCycleFlag, imageIndex = (imageIndex + 1) % image.length;
 </script>
 
-<div class="flex flex-col bg-gray-100 rounded-xl w-full p-6 transition-all duration-300">
-    <div class="flex items-center">
+<div class="flex flex-col relative" role="tooltip" on:mouseenter={() => reveal = true} on:mouseleave={() => reveal = false}>
+    {#if spoiler && !reveal}
+        <div class="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black blur-0 text-center"
+            transition:fade={{ duration: 150 }}>
+            <Rich text={$_("misc.spoiler")} />
+        </div>
+    {/if}
+    <div class="flex items-center bg-gray-100 rounded-xl w-full p-6 transition-all duration-300 {spoiler ? "blur-md hover:blur-0" : ""}">
         {#if image instanceof Array}
             <div class="flex-[30%] grid">
                 {#key imageCycleFlag}
