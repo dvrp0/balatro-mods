@@ -20,9 +20,9 @@
     $: imageCycleFlag, imageIndex = (imageIndex + 1) % image.length;
 </script>
 
-<div class="flex flex-col relative" role="tooltip" on:mouseenter={() => reveal = true} on:mouseleave={() => reveal = false}>
+<div class="relative flex flex-col" role="tooltip" on:mouseenter={() => reveal = true} on:mouseleave={() => reveal = false}>
     {#if spoiler && !reveal}
-        <div class="absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-black blur-0 text-center"
+        <div class="absolute z-10 text-center text-black -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 blur-0"
             transition:fade={{ duration: 150 }}>
             <Rich text={$_("misc.spoiler")} />
         </div>
@@ -40,7 +40,7 @@
         {/if}
         <div class="ml-4 flex flex-col flex-[100%]">
             <span class="font-bold">{name}</span>
-            <div class="mb-4 flex items-center flex-wrap">
+            <div class="flex flex-wrap items-center mb-4">
                 <span class="text-gray-400">{type}</span>
                 {#if tag}
                     <div class="mx-1">

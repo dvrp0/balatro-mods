@@ -1,5 +1,6 @@
 <script lang="ts">
     import { onMount } from "svelte";
+    import { fade } from "svelte/transition";
     import { _ } from "svelte-i18n";
     import { MetaTags } from "svelte-meta-tags";
     import { beforeNavigate } from "$app/navigation";
@@ -18,14 +19,21 @@
     }))
         .map(x => x.replace("/static", ""))
         .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
+    const logos = Object.keys(import.meta.glob("/static/images/logos/reverie/*.*", {
+        eager: true
+    }))
+        .map(x => x.replace("/static", ""))
+        .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }));
 
     let tag = $latest?.["reverie"] ?? undefined;
     let selectedImage: string | undefined = undefined;
     let imageCycleFlag = 1;
-
     let imageCycleInterval = setInterval(() => {
         imageCycleFlag *= -1;
     }, 5000);
+    let logoIndex = logos.length - 1; // index will be immediately incremented by 1 because of the below line
+
+    $: imageCycleFlag, logoIndex = (logoIndex + 1) % logos.length;
 
     onMount(async () => {
         const response = await fetch(GITHUB_RELEASE_API_URL.replace("{repo}", "reverie"))
@@ -98,26 +106,31 @@
             })} />
         {/key}
     </button>
-    <button class="fit ml-2 bg-gray-100 hover:bg-gray-200" on:click={() => window.open("https://github.com/dvrp0/reverie")}>
+    <button class="ml-2 bg-gray-100 fit hover:bg-gray-200" on:click={() => window.open("https://github.com/dvrp0/reverie")}>
         <Icon kind="github" color="bg-gray-900" />
     </button>
 </div>
-<img class="mt-16 self-center sm:w-[70%]" src="reverie.png" alt="Reverie Logo" />
+<div class="mt-16 mx-auto grid sm:w-[70%]">
+    {#key imageCycleFlag}
+        <img in:fade={{ duration: 250 }} out:fade={{ delay: 250, duration: 0 }} class="row-span-full col-span-full"
+            src={logos[logoIndex]} alt="Reverie Logo" loading="lazy" />
+    {/key}
+</div>
 <span class="mt-16">{$_("reverie.intro-1")}</span>
 <span class="mt-4">{$_("reverie.intro-2")}</span>
-<span class="font-bold mt-16 mb-4">{$_("misc.installation")}</span>
+<span class="mt-16 mb-4 font-bold">{$_("misc.installation")}</span>
 <IconList kind="sparkle" items={[
     $_("reverie.install-1"),
     $_("reverie.install-2"),
     $_("reverie.install-3"),
 ]} />
-<span class="font-bold mt-16 mb-4">{$_("misc.languages")}</span>
+<span class="mt-16 mb-4 font-bold">{$_("misc.languages")}</span>
 <span class="mb-4">{$_("reverie.languages.description")}</span>
 <IconList kind="sparkle" items={[
     $_("reverie.languages.en"),
     $_("reverie.languages.ko")
 ]} />
-<span class="font-bold mt-16 mb-4">{$_("misc.contents")}</span>
+<span class="mt-16 mb-4 font-bold">{$_("misc.contents")}</span>
 <div class="grid gap-y-4">
     <Rich text={$_("reverie.contents", {
         values: {
@@ -129,12 +142,12 @@
         }
     })} />
     <Rich text={$_("reverie.cines-1")} />
-    <img class="rounded-xl w-full mx-auto sm:w-auto" src={screenshots[0]} alt="Reverie Screenshot" loading="lazy" />
+    <img class="w-full mx-auto rounded-xl sm:w-auto" src={screenshots[0]} alt="Reverie Screenshot" loading="lazy" />
     <span>{$_("reverie.cines-2")}</span>
     <Rich text={$_("reverie.cines-3")} />
     <Rich text={$_("reverie.cines-4")} />
 </div>
-<div class="grid grid-cols-1 mt-4 gap-4">
+<div class="grid grid-cols-1 gap-4 mt-4">
     <ContentEntry name={$_("reverie.gem-heist.name")} type={$_("misc.cine")} {imageCycleFlag} image={[
             "/images/consumables/c_gem_heist_quest.png",
             "/images/consumables/c_gem_heist.png",
@@ -176,17 +189,21 @@
             "/images/consumables/c_ive_no_shape.png",
         ]} description={$_("reverie.ive-no-shape.description")} />
 </div>
-<div class="grid grid-cols-1 mt-16 gap-4">
+<div class="grid grid-cols-1 gap-4 mt-16">
+    <ContentEntry name={$_("reverie.reverie.name")} type={$_("misc.spectral")} image="/images/consumables/c_reverie.png"
+        description={$_("reverie.reverie.description")} spoiler />
+</div>
+<div class="grid grid-cols-1 gap-4 mt-16">
     <ContentEntry name={$_("reverie.filmstrip.name")} type={$_("misc.back")} image="/images/backs/b_filmstrip.png"
         description={$_("reverie.filmstrip.description")} />
     <ContentEntry name={$_("reverie.stamp.name")} type={$_("misc.back")} image="/images/backs/b_stamp.png"
         description={$_("reverie.stamp.description")} />
 </div>
-<div class="grid grid-cols-1 mt-16 gap-4">
+<div class="grid grid-cols-1 gap-4 mt-16">
     <ContentEntry name={$_("reverie.dynamic-film.name")} type={$_("misc.commonJoker")} cost={4} image="/images/jokers/j_dynamic_film.png"
         description={$_("reverie.dynamic-film.description")} />
 </div>
-<div class="grid grid-cols-1 mt-16 gap-4">
+<div class="grid grid-cols-1 gap-4 mt-16">
     <ContentEntry name={$_("reverie.tag-pack-normal.name")} type={$_("misc.pack")} cost={4} {imageCycleFlag} image={[
             "/images/boosters/p_tag_normal_1.png",
             "/images/boosters/p_tag_normal_2.png"
@@ -199,16 +216,20 @@
             "/images/boosters/p_film_normal_1.png",
             "/images/boosters/p_film_normal_2.png"
         ]} description={$_("reverie.film-pack-normal.description")} />
+    <ContentEntry name={$_("reverie.film-pack-jumbo.name")} type={$_("misc.pack")} cost={6} image="/images/boosters/p_film_jumbo_1.png"
+        description={$_("reverie.film-pack-jumbo.description")} />
+    <ContentEntry name={$_("reverie.film-pack-mega.name")} type={$_("misc.pack")} cost={8} image="/images/boosters/p_film_mega_1.png"
+        description={$_("reverie.film-pack-mega.description")} />
     <ContentEntry name={$_("reverie.pack-normal.name")} type={$_("misc.pack")} cost={6} image="/images/boosters/p_crazy_lucky_1.png"
         description={$_("reverie.pack-normal.description")} />
 </div>
-<div class="grid grid-cols-1 mt-16 gap-4">
+<div class="grid grid-cols-1 gap-4 mt-16">
     <ContentEntry name={$_("reverie.stub-tag.name")} type={$_("misc.tag")} image="/images/tags/tag_cine.png" smallImage
         description={$_("reverie.stub-tag.description")} />
     <ContentEntry name={$_("reverie.stamp-tag.name")} type={$_("misc.tag")} image="/images/tags/tag_mega_tag.png" smallImage
         description={$_("reverie.stamp-tag.description")} />
 </div>
-<span class="font-bold mt-16 mb-4">{$_("misc.screenshots")}</span>
+<span class="mt-16 mb-4 font-bold">{$_("misc.screenshots")}</span>
 <div class="grid grid-cols-1 mt-4 gap-4 *:rounded-xl">
     {#each screenshots.slice(1) as src}
         <img {src} alt="Reverie Screenshot" loading="lazy" on:click={() => {
@@ -216,8 +237,9 @@
         }} />
     {/each}
 </div>
-<span class="font-bold mt-16 mb-4">{$_("misc.changelog")}</span>
+<span class="mt-16 mb-4 font-bold">{$_("misc.changelog")}</span>
 <IconList kind="sparkle" items={[
+    `<xin><c>v1.1.0</></><br>${$_("reverie.changelog.1-1-0").split("|").join("<br>")}`,
     `<xin><c>v1.0.2</></><br>${$_("reverie.changelog.1-0-2").split("|").join("<br>")}`,
     `<xin><c>v1.0.1</></><br>${$_("reverie.changelog.1-0-1").split("|").join("<br>")}`,
     `<xin><c>v1.0.0</></><br>${$_("reverie.changelog.1-0-0").split("|").join("<br>")}`

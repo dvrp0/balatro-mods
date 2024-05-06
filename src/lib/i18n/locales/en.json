@@ -23,7 +23,9 @@
         "pack": "Booster Pack",
         "tag": "Tag",
         "consumable": "Consumable",
-        "cine": "Cine"
+        "spectral": "Spectral",
+        "cine": "Cine",
+        "spoiler": "<at>Spoiler 👀</><br>Hover or touch to reveal"
     },
     "ror": {
         "title": "Risk of Jesters - DVRP's Balatro Mods",
@@ -146,7 +148,7 @@
         "title": "Reverie - DVRP's Balatro Mods",
         "description": "A movie-themed expansion that focuses on providing special shops and various contents around it.",
         "name": "Reverie",
-        "intro-1": "Ever had a dream where all shop cards become Negative? Or a dream that shop becomes complete gatcha and RNG? They are all here, just prepare your tickets!",
+        "intro-1": "Ever had a dream where all shop cards become Negative? Or a dream that shop becomes complete gacha and RNG? They are all here, just prepare your tickets!",
         "intro-2": "Reverie is a movie-themed Balatro expansion that focuses on providing special shops and various contents around it.",
         "install-1": "Install <a href=\"https://github.com/Steamopollys/Steamodded/releases\" target=\"_blank\">Steamodded</a> <at>(0.9.8 or higher)</> and <a href=\"https://github.com/ethangreen-dev/lovely-injector/releases\" target=\"_blank\">Lovely</a> <at>(v0.5.0-beta2 or higher)</>.",
         "install-2": "Download the mod and unzip it.",
@@ -160,7 +162,8 @@
         "changelog": {
             "1-0-0": "🎉 Mod released",
             "1-0-1": "🔧 Fixed a bug where completing Exchange Coupon may crashed the game|🔧 Fixed a bug where Cine slot doesn't get affected by screenshake|🔧 Fixed some minor wording",
-            "1-0-2": "🔧 Added compatibility with DX Boosters|🔧 Fixed a bug where Filmstrip Deck doesn't give additional Cine slot|🔧 Fixed imcompatibility with other modded Jokers"
+            "1-0-2": "🔧 Added compatibility with DX Boosters|🔧 Fixed a bug where Filmstrip Deck doesn't give additional Cine slot|🔧 Fixed imcompatibility with other modded Jokers",
+            "1-1-0": "✨ Added a new Spectral card: Reverie|✨ Added new Booster Packs: Jumbo Film Pack, Mega Film Pack|🔼 Changed requirements for Poker Face Exchange Coupon: enhancing 10 cards → 8 cards|🔄 Changed requirements for Eerie Inn Exchange Coupon: now requires destroying 5 cards|🔼 Changed Eerie Inn: now only Spectral Packs appear|🔽 Changed requirements for Tag or Die Exchange Coupon: skipping 3 Blinds → 4 Blinds|🔽 Changed Tag or Die: Tags cost $7 → $8|🔼 Now using Cine cards will restock all Booster Packs|🔧 Added compatibility with Gacha Deck from Gimmicky Decks Pack|🔧 Improved compatibility with DX Tarots|🔧 Improved descriptions to be more clear|🔧 Fixed interation between purchased Tags and Double Tag|🔧 Fixed a bug where viewing deck or opening collection progressed Poker Face Exchange Coupon|🔧 Fixed a bug where Crazy Lucky didn't properly stacked with Let It Moon/Eerie Inn/Tag or Die|🔧 Fixed a bug where opening modded Booster Packs didn't progressed Crazy Lucky Exchange Coupon|🔧 Fixed a bug where progress of Tag or Die Exchange Coupon didn't get saved|🔧 Fixed a bug where selling Editioned consumables progressed Gem Heist Exchange Coupon|🔧 Fixed a bug where completing Exchange Coupons can make Cine cards debuffed|🔧 Fixed a bug where after using I Sing, I've No Shape the game could crash in rare cases"
         },
         "cines-1": "<cine>Cine</> cards are new type of consumables that can temporarily spice up your shop. To get them, you first need to earn <cine>Exchange Coupons</> from Booster Packs or Tags.",
         "cines-2": "They are some sort of quests that will turn into Cine card once you complete the requirements. In rare cases, you can get Cine card directly without going through quests.",
@@ -168,15 +171,15 @@
         "cines-4": "Using two or more Cine cards in one shop will replace each other, unless you are playing with <cine>Filmstrip Deck</>. Combining Cine cards is very satisfying and powerful, so try out many different combos!",
         "gem-heist": {
             "name": "Gem Heist",
-            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Gem Heist</> after selling <at>2 Editioned Jokers</><br><in>(Currently <at>0</>/2)</><br><br><cinein>Gem Heist</><br>During this shop, all cards become <ed>Polychrome</> and <at>25%</> off"
+            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Gem Heist</> after selling <at>2 Editioned Jokers</><br><in>(Currently <at>0</>/2)</><br><br><cinein>Gem Heist</><br>During this shop, all cards become <ed>Polychrome</> and <at>25%</> off<br><s>Rerolls cards</>"
         },
         "tag-or-die": {
             "name": "Tag or Die",
-            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Tag or Die</> after skipping <at>3 Blinds</><br><in>(Currently <at>0</>/3)</><br><br><cinein>Tag or Die</><br>During this shop, only <at>Tags</> that cost <at>$7</> appear<br><s>Rerolls <at>Booster Packs</></>"
+            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Tag or Die</> after skipping <at>4 Blinds</><br><in>(Currently <at>0</>/4)</><br><br><cinein>Tag or Die</><br>During this shop, only <at>Tags</> that cost <at>$8</> appear<br><s>Rerolls <at>Booster Packs</></>"
         },
         "eerie-inn": {
             "name": "Eerie Inn",
-            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Eerie Inn</> after using <at>3</> <sp>Spectral</> cards<br><in>(Currently <at>0</>/3)</><br><br><cinein>Eerie Inn</><br>During this shop, only <sp>Spectral</> cards appear<br><s>Rerolls <at>Booster Packs</></>"
+            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Eerie Inn</> after destroying <at>5</> cards<br><in>(Currently <at>0</>/5)</><br><br><cinein>Eerie Inn</><br>During this shop, only <sp>Spectral Packs</> appear<br><s>Rerolls <at>Booster Packs</></>"
         },
         "let-it-moon": {
             "name": "Let It Moon",
@@ -184,7 +187,7 @@
         },
         "poker-face": {
             "name": "Poker Face",
-            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Poker Face</> after enhancing <at>10 Playing cards</><br><in>(Currently <at>0</>/10)</><br><br><cinein>Poker Face</><br>During this shop, only <at>Playing cards</> from your deck appear<br><s>Rerolls <at>Booster Packs</></>"
+            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Poker Face</> after enhancing <at>8 Playing cards</><br><in>(Currently <at>0</>/8)</><br><br><cinein>Poker Face</><br>During this shop, only <at>Playing cards</> from your deck appear<br><s>Rerolls <at>Booster Packs</></>"
         },
         "crazy-lucky": {
             "name": "Crazy Lucky",
@@ -192,7 +195,7 @@
         },
         "adrifting": {
             "name": "Adrifting",
-            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Adrifting</> after playing <at>5 debuffed</> or <at>faced down</> cards<br><in>(Currently <at>0</>/5)</><br><br><cinein>Adrifting</><br>During this shop, everything is <at>faced down</> and costs <at>$1</><br><s>Rerolls <at>Booster Packs</></>"
+            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Adrifting</> after playing <at>5 debuffed</> or <at>faced down</> cards<br><in>(Currently <at>0</>/5)</><br><br><cinein>Adrifting</><br>During this shop, everything is <at>faced down</> and costs <at>$1</><br><s>Rerolls cards and <at>Booster Packs</></>"
         },
         "morsel": {
             "name": "Morsel",
@@ -200,11 +203,15 @@
         },
         "unseen": {
             "name": "The Unseen",
-            "description": "<xin>Exchange Coupon</><br>Converts to <cine>The Unseen</> after having <at>1</> empty <at>Joker</> slot for <at>5</> rounds<br><in>(Currently <at>0</>/5)</><br><br><cinein>The Unseen</><br>During this shop, all <at>Jokers</> and <at>consumables</> become <ed>Negative</><br><mult>X5</> reroll cost"
+            "description": "<xin>Exchange Coupon</><br>Converts to <cine>The Unseen</> after having <at>1</> empty <at>Joker</> slot for <at>5</> rounds<br><in>(Currently <at>0</>/5)</><br><br><cinein>The Unseen</><br>During this shop, all <at>Jokers</> and <at>consumables</> become <ed>Negative</><br><mult>X5</> reroll cost<br><s>Rerolls cards</>"
         },
         "ive-no-shape": {
             "name": "I Sing, I've No Shape",
             "description": "<xin>Exchange Coupon</><br>Converts to <cine>I Sing, I've No Shape</> after scoring more than <at>X2</> of required Chips in <at>2 Blinds</><br><in>(Currently <at>0</>/2)</><br><br><cinein>I Sing, I've No Shape</><br>During this shop, only owned <at>Jokers</> appear<br><mult>X3</> reroll cost<br><s>Rerolls <at>Booster Packs</></>"
+        },
+        "reverie": {
+            "name": "Reverie",
+            "description": "Applies every <cine>Cine cards</> to this shop"
         },
         "filmstrip": {
             "name": "Filmstrip Deck",
@@ -229,6 +236,14 @@
         "film-pack-normal": {
             "name": "Film Pack",
             "description": "Choose <at>1</> of up to <at>2</> <cine>Exchange Coupons</> to add to your possesion"
+        },
+        "film-pack-jumbo": {
+            "name": "Jumbo Film Pack",
+            "description": "Choose <at>1</> of up to <at>4</> <cine>Exchange Coupons</> to add to your possesion"
+        },
+        "film-pack-mega": {
+            "name": "Film Pack",
+            "description": "Choose <at>1</> of up to <at>2</> <cine>Cine</> cards to add to your possesion"
         },
         "pack-normal": {
             "name": "Pack",
