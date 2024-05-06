@@ -162,7 +162,7 @@
             "1-0-0": "🎉 Mod released",
             "1-0-1": "🔧 Fixed a bug where completing Exchange Coupon may crashed the game|🔧 Fixed a bug where Cine slot doesn't get affected by screenshake|🔧 Fixed some minor wording",
             "1-0-2": "🔧 Added compatibility with DX Boosters|🔧 Fixed a bug where Filmstrip Deck doesn't give additional Cine slot|🔧 Fixed imcompatibility with other modded Jokers",
-            "1-1-0": "✨ Added a new Spectral card: Reverie|✨ Added new Booster Packs: Jumbo Film Pack, Mega Film Pack|🔼 Changed requirements for Poker Face Exchange Coupon: enhancing 10 cards → 8 cards|🔄 Changed requirements for Eerie Inn Exchange Coupon: now requires destroying 5 cards|🔼 Changed Eerie Inn: now only Spectral Packs appear|🔽 Changed requirements for Tag or Die Exchange Coupon: skipping 3 Blinds → 4 Blinds|🔽 Changed Tag or Die: Tags cost $7 → $8|🔼 Now using Cine cards will restock all Booster Packs|🔧 Added compatibility with Gacha Deck from Gimmicky Decks Pack|🔧 Added background particles to Pack and Film Packs|🔧 Improved Negative visuals on Cine cards|🔧 Improved compatibility with DX Tarots|🔧 Improved descriptions to be more clear|🔧 Fixed interation between purchased Tags and Double Tag|🔧 Fixed a bug where viewing deck or opening collection progressed Poker Face Exchange Coupon|🔧 Fixed a bug where Crazy Lucky didn't properly stack with Let It Moon/Eerie Inn/Tag or Die|🔧 Fixed a bug where opening modded Booster Packs didn't progressed Crazy Lucky Exchange Coupon|🔧 Fixed a bug where progress of Tag or Die Exchange Coupon didn't get saved|🔧 Fixed a bug where selling Editioned consumables progressed Gem Heist Exchange Coupon|🔧 Fixed a bug where completing Exchange Coupons can make Cine cards debuffed|🔧 Fixed a bug where after using I Sing, I've No Shape the game could crash in rare cases"
+            "1-1-0": "✨ Added a new Spectral card: Reverie|✨ Added new Booster Packs: Jumbo Film Pack, Mega Film Pack|🔼 Changed requirements for Poker Face Exchange Coupon: enhancing 10 cards → 8 cards|🔄 Changed requirements for Eerie Inn Exchange Coupon: now requires destroying 5 cards|🔄 Changed Eerie Inn: now only Spectral Packs appear and increases reroll cost by X2|🔽 Changed requirements for Tag or Die Exchange Coupon: skipping 3 Blinds → 4 Blinds|🔽 Changed Tag or Die: Tags cost $7 → $8|🔼 Now using Cine cards will restock all Booster Packs|🔧 Added compatibility with Gacha Deck from Gimmicky Decks Pack|🔧 Added background particles to Pack and Film Packs|🔧 Improved Negative visuals on Cine cards|🔧 Improved compatibility with DX Tarots|🔧 Improved descriptions to be more clear|🔧 Fixed interation between purchased Tags and Double Tag|🔧 Fixed a bug where viewing deck or opening collection progressed Poker Face Exchange Coupon|🔧 Fixed a bug where Crazy Lucky didn't properly stack with Let It Moon/Eerie Inn/Tag or Die|🔧 Fixed a bug where opening modded Booster Packs didn't progressed Crazy Lucky Exchange Coupon|🔧 Fixed a bug where progress of Tag or Die Exchange Coupon didn't get saved|🔧 Fixed a bug where selling Editioned consumables progressed Gem Heist Exchange Coupon|🔧 Fixed a bug where completing Exchange Coupons can make Cine cards debuffed|🔧 Fixed a bug where after using I Sing, I've No Shape the game could crash in rare cases"
         },
         "cines-1": "<cine>Cine</> cards are new type of consumables that can temporarily spice up your shop. To get them, you first need to earn <cine>Exchange Coupons</> from Booster Packs or Tags.",
         "cines-2": "They are some sort of quests that will turn into Cine card once you complete the requirements. In rare cases, you can get Cine card directly without going through quests.",
@@ -178,7 +178,7 @@
         },
         "eerie-inn": {
             "name": "Eerie Inn",
-            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Eerie Inn</> after destroying <at>5</> cards<br><in>(Currently <at>0</>/5)</><br><br><cinein>Eerie Inn</><br>During this shop, only <sp>Spectral Packs</> appear<br><s>Rerolls <at>Booster Packs</></>"
+            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Eerie Inn</> after destroying <at>5</> cards<br><in>(Currently <at>0</>/5)</><br><br><cinein>Eerie Inn</><br>During this shop, only <sp>Spectral Packs</> appear<br><mult>X2</> reroll cost<br><s>Rerolls <at>Booster Packs</></>"
         },
         "let-it-moon": {
             "name": "Let It Moon",
@@ -241,7 +241,7 @@
             "description": "Choose <at>1</> of up to <at>4</> <cine>Exchange Coupons</> to add to your possesion"
         },
         "film-pack-mega": {
-            "name": "Film Pack",
+            "name": "Mega Film Pack",
             "description": "Choose <at>1</> of up to <at>2</> <cine>Cine</> cards to add to your possesion"
         },
         "pack-normal": {
