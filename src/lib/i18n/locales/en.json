@@ -183,7 +183,7 @@
         },
         "let-it-moon": {
             "name": "Let It Moon",
-            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Let It Moon</> after using <at>10</> <pl>Planet</> or <tr>Tarot</> cards<br><in>(Currently <at>0</>/10)</><br><br><cinein>Let It Moon</><br>During this shop, only <pl>Planet</> and <tr>Tarot</> cards appear<br><s>Rerolls <at>Booster Packs</></>"
+            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Let It Moon</> after using <at>10</> <pl>Planet</> or <tr>Tarot</> cards<br><in>(Currently <at>0</>/10)</><br><br><cinein>Let It Moon</><br>During this shop, only <pl>Planet</> and <tr>Tarot</> cards appear<br><at>X0.5</> reroll cost<br><s>Rerolls <at>Booster Packs</></>"
         },
         "poker-face": {
             "name": "Poker Face",
