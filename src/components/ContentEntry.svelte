@@ -31,7 +31,7 @@
         {#if image instanceof Array}
             <div class="flex-[30%] grid">
                 {#key imageCycleFlag}
-                    <img transition:fade={{ duration: 250 }} class="row-span-full col-span-full {smallImage ? "object-none": ""}"
+                    <img in:fade={{ duration: 250 }} out:fade={{ delay: 250, duration: 250 }} class="row-span-full col-span-full {smallImage ? "object-none": ""}"
                         src={image[imageIndex]} alt={name} loading="lazy" />
                 {/key}
             </div>
@@ -46,7 +46,7 @@
                     <div class="mx-1">
                         <Icon kind="sparkle" color="bg-gray-400" />
                     </div>
-                    <span class="text-gray-400">{tag}</span>
+                    <Rich text="<in>{tag}</>" />
                 {/if}
                 {#if cost}
                     <div class="mx-1">
