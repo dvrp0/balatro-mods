@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import { fade } from "svelte/transition";
+    import { fly } from "svelte/transition";
+    import { quartOut } from "svelte/easing";
     import { _ } from "svelte-i18n";
     import { MetaTags } from "svelte-meta-tags";
     import { beforeNavigate } from "$app/navigation";
@@ -112,7 +113,7 @@
 </div>
 <div class="mt-16 mx-auto grid sm:w-[70%]">
     {#key imageCycleFlag}
-        <img in:fade={{ duration: 250 }} out:fade={{ delay: 250, duration: 0 }} class="row-span-full col-span-full"
+        <img in:fly={{ delay: 500, x: -20, duration: 1000, easing: quartOut }} out:fly={{ x: 20, duration: 1000, easing: quartOut }} class="row-span-full col-span-full"
             src={logos[logoIndex]} alt="Reverie Logo" loading="lazy" />
     {/key}
 </div>
