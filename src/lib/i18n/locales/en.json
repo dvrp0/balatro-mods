@@ -158,12 +158,13 @@
             "en": "English 🇬🇧",
             "ko": "Korean 🇰🇷"
         },
-        "contents": "Current version has <cine>{cines} Cines</>, <at>{jokers} Jokers</>, <at>{backs} Decks</>, <at>{boosters} Booster Packs</>, and <at>{tags} Tags</>.",
+        "contents": "Current version has <cine>{cines} Cines</>, <sp>{spectrals} Spectral</>, <at>{jokers} Joker</>, <at>{vouchers} Vouchers</>, <at>{backs} Decks</>, <at>{boosters} Booster Packs</>, and <at>{tags} Tags</>.",
         "changelog": {
             "1-0-0": "🎉 Mod released",
             "1-0-1": "🔧 Fixed a bug where completing Exchange Coupon may crashed the game|🔧 Fixed a bug where Cine slot doesn't get affected by screenshake|🔧 Fixed some minor wording",
             "1-0-2": "🔧 Added compatibility with DX Boosters|🔧 Fixed a bug where Filmstrip Deck doesn't give additional Cine slot|🔧 Fixed imcompatibility with other modded Jokers",
-            "1-1-0": "✨ Added a new Spectral card: Reverie|✨ Added new Booster Packs: Jumbo Film Pack, Mega Film Pack|🔼 Changed requirements for Poker Face Exchange Coupon: enhancing 10 cards → 8 cards|🔄 Changed requirements for Eerie Inn Exchange Coupon: now requires destroying 5 cards|🔄 Changed Eerie Inn: now only Spectral Packs appear and increases reroll cost by X2|🔽 Changed requirements for Tag or Die Exchange Coupon: skipping 3 Blinds → 4 Blinds|🔽 Changed Tag or Die: Tags cost $7 → $8|🔼 Now using Cine cards will restock all Booster Packs|🔧 Added compatibility with Gacha Deck from Gimmicky Decks Pack|🔧 Added background particles to Pack and Film Packs|🔧 Improved Negative visuals on Cine cards|🔧 Improved compatibility with DX Tarots|🔧 Improved descriptions to be more clear|🔧 Fixed interation between purchased Tags and Double Tag|🔧 Fixed a bug where viewing deck or opening collection progressed Poker Face Exchange Coupon|🔧 Fixed a bug where Crazy Lucky didn't properly stack with Let It Moon/Eerie Inn/Tag or Die|🔧 Fixed a bug where opening modded Booster Packs didn't progressed Crazy Lucky Exchange Coupon|🔧 Fixed a bug where progress of Tag or Die Exchange Coupon didn't get saved|🔧 Fixed a bug where selling Editioned consumables progressed Gem Heist Exchange Coupon|🔧 Fixed a bug where completing Exchange Coupons can make Cine cards debuffed|🔧 Fixed a bug where after using I Sing, I've No Shape the game could crash in rare cases"
+            "1-1-0": "✨ Added a new Spectral card: Reverie|✨ Added new Booster Packs: Jumbo Film Pack, Mega Film Pack|🔼 Changed requirements for Poker Face Exchange Coupon: enhancing 10 cards → 8 cards|🔄 Changed requirements for Eerie Inn Exchange Coupon: now requires destroying 5 cards|🔄 Changed Eerie Inn: now only Spectral Packs appear and increases reroll cost by X2|🔽 Changed requirements for Tag or Die Exchange Coupon: skipping 3 Blinds → 4 Blinds|🔽 Changed Tag or Die: Tags cost $7 → $8|🔼 Now using Cine cards will restock all Booster Packs|🔧 Added compatibility with Gacha Deck from Gimmicky Decks Pack|🔧 Added background particles to Pack and Film Packs|🔧 Improved Negative visuals on Cine cards|🔧 Improved compatibility with DX Tarots|🔧 Improved descriptions to be more clear|🔧 Fixed interation between purchased Tags and Double Tag|🔧 Fixed a bug where viewing deck or opening collection progressed Poker Face Exchange Coupon|🔧 Fixed a bug where Crazy Lucky didn't properly stack with Let It Moon/Eerie Inn/Tag or Die|🔧 Fixed a bug where opening modded Booster Packs didn't progress Crazy Lucky Exchange Coupon|🔧 Fixed a bug where progress of Tag or Die Exchange Coupon didn't get saved|🔧 Fixed a bug where selling Editioned consumables progressed Gem Heist Exchange Coupon|🔧 Fixed a bug where rewards of Exchange Coupons can show up debuffed|🔧 Fixed a bug where after using I Sing, I've No Shape could crash the game in rare cases",
+            "1-2-0": "✨ Added new cross-mod Cine cards: Fool Metal Alchemist, Every Hue, Radioactive|✨ Added new Vouchers: Script, Megaphone|🔽 Changed Crazy Lucky: increased chances of getting Jokers/Playing cards, decreased chances of Tags/Vouchers, significantly decreased chances of complete Cine cards|🔽 Changed requirements for I Sing, I've No Shape Exchange Coupon: score more than X2 Chips in 2 Blinds → 3 Blinds|🔽 Changed I Sing, I've No Shape: reroll cost modifier X3 → +$20, now no longer rerolls Booster Packs|🔽 Changed Let It Moon: removed X0.5 reroll cost modifier|🔽 Now reroll cost modifiers of Cine cards can stack|🔧 Significantly refactored codes to remove potential incompatibilities|🔧 Improved interaction between Morsel and I Sing, I've No Shape|🔧 Improved Booster Pack sprites|🔧 Fixed a bug where selling or using consumables progressed Eerie Inn Exchange Coupon|🔧 Fixed a bug where Playing Cards from Pack didn't become Polychrome when Gem Heist and Crazy Lucky were stacked|🔧 Fixed a bug where you couldn't select Ankh from Pack when Joker slot was full|🔧 Fixed a bug where using Crazy Lucky could crash the game in rare cases|🔧 Fixed a bug where you couldn't use consumables when Pack is opened"
         },
         "cines-1": "<cine>Cine</> cards are new type of consumables that can temporarily spice up your shop. To get them, you first need to earn <cine>Exchange Coupons</> from Booster Packs or Tags.",
         "cines-2": "They are some sort of quests that will turn into Cine card once you complete the requirements. In rare cases, you can get Cine card directly without going through quests.",
@@ -183,7 +184,7 @@
         },
         "let-it-moon": {
             "name": "Let It Moon",
-            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Let It Moon</> after using <at>10</> <pl>Planet</> or <tr>Tarot</> cards<br><in>(Currently <at>0</>/10)</><br><br><cinein>Let It Moon</><br>During this shop, only <pl>Planet</> and <tr>Tarot</> cards appear<br><at>X0.5</> reroll cost<br><s>Rerolls <at>Booster Packs</></>"
+            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Let It Moon</> after using <at>10</> <pl>Planet</> or <tr>Tarot</> cards<br><in>(Currently <at>0</>/10)</><br><br><cinein>Let It Moon</><br>During this shop, only <pl>Planet</> and <tr>Tarot</> cards appear<br><s>Rerolls <at>Booster Packs</></>"
         },
         "poker-face": {
             "name": "Poker Face",
@@ -207,7 +208,22 @@
         },
         "ive-no-shape": {
             "name": "I Sing, I've No Shape",
-            "description": "<xin>Exchange Coupon</><br>Converts to <cine>I Sing, I've No Shape</> after scoring more than <at>X2</> of required Chips in <at>2 Blinds</><br><in>(Currently <at>0</>/2)</><br><br><cinein>I Sing, I've No Shape</><br>During this shop, only owned <at>Jokers</> appear<br><mult>X3</> reroll cost<br><s>Rerolls <at>Booster Packs</></>"
+            "description": "<xin>Exchange Coupon</><br>Converts to <cine>I Sing, I've No Shape</> after scoring more than <at>X2</> of required Chips in <at>3 Blinds</><br><in>(Currently <at>0</>/3)</><br><br><cinein>I Sing, I've No Shape</><br>During this shop, only owned <at>Jokers</> appear<br><mult>+$20</> reroll cost"
+        },
+        "alchemist": {
+            "name": "Fool Metal Alchemist",
+            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Fool Metal Alchemist</> after using <at>5</> <alc>Alchemical</> cards<br><in>(Currently <at>0</>/5)</><br><br><cinein>Fool Metal Alchemist</><br>During this shop, <at>+2</> consumable slot and only <alc>Alchemical</> cards appear<br><s>Rerolls <at>Booster Packs</></>",
+            "requires": "Requires <a href=\"https://itayfeder.github.io/Codex-Arcanum/\" target=\"_blank\">Codex Arcanum</a>"
+        },
+        "every-hue": {
+            "name": "Every Hue",
+            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Every Hue</> after using <at>2</> <ed>Colour</> cards<br><in>(Currently <at>0</>/2)</><br><br><cinein>Every Hue</><br>During this shop, only <ed>Colour</> cards that already have <at>3 rounds</> appear<br><s>Rerolls <at>Booster Packs</></>",
+            "requires": "Requires <a href=\"https://notmario.github.io/MoreFluff/\" target=\"_blank\">MoreFluff</a>"
+        },
+        "radioactive": {
+            "name": "Radioactive",
+            "description": "<xin>Exchange Coupon</><br>Converts to <cine>Radioactive</> after getting <at>1 Fusion Joker</><br><in>(Currently <at>0</>/1)</><br><br><cinein>Radioactive</><br>During this shop, only <at>Jokers</> that can be used in <at>Fusions</> appear<br><s>Rerolls <at>Booster Packs</></>",
+            "requires": "Requires <a href=\"https://itayfeder.github.io/Fusion-Jokers/\" target=\"_blank\">Fusion Jokers</a>"
         },
         "reverie": {
             "name": "Reverie",
@@ -259,7 +275,15 @@
         },
         "dynamic-film": {
             "name": "Dynamic Film",
-            "description": "This Joker gains <chip>+15</> Chips every time an <cine>Exchange Coupon</> is progressing<br><in>(Currently <chip>+0</> Chips)</>"
+            "description": "This Joker gains <chip>+15</> Chips every time an <cine>Exchange Coupon</> progresses<br><in>(Currently <chip>+0</> Chips)</>"
+        },
+        "script": {
+            "name": "Script",
+            "description": "<at>+1</> card slot available in shop while <cine>Cine</> card is active"
+        },
+        "megaphone": {
+            "name": "Megaphone",
+            "description": "Requirements of <cine>Cine</> cards are halved"
         }
     }
 }

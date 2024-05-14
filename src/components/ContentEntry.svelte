@@ -31,7 +31,7 @@
         {#if image instanceof Array}
             <div class="flex-[30%] grid">
                 {#key imageCycleFlag}
-                    <img in:fade={{ duration: 250 }} out:fade={{ delay: 250, duration: 250 }} class="row-span-full col-span-full {smallImage ? "object-none": ""}"
+                    <img in:fade={{ duration: 250 }} out:fade={{ delay: 250, duration: 0 }} class="row-span-full col-span-full {smallImage ? "object-none": ""}"
                         src={image[imageIndex]} alt={name} loading="lazy" />
                 {/key}
             </div>

@@ -135,10 +135,12 @@
 <div class="grid gap-y-4">
     <Rich text={$_("reverie.contents", {
         values: {
-            cines: 10,
+            cines: 13,
+            spectrals: 1,
             jokers: 1,
+            vouchers: 2,
             backs: 2,
-            boosters: 7,
+            boosters: 9,
             tags: 2
         }
     })} />
@@ -189,6 +191,18 @@
             "/images/consumables/c_ive_no_shape_quest.png",
             "/images/consumables/c_ive_no_shape.png",
         ]} description={$_("reverie.ive-no-shape.description")} />
+    <ContentEntry name={$_("reverie.alchemist.name")} type={$_("misc.cine")} {imageCycleFlag} image={[
+            "/images/consumables/c_alchemist_quest.png",
+            "/images/consumables/c_alchemist.png",
+        ]} description={$_("reverie.alchemist.description")} tag={$_("reverie.alchemist.requires")} />
+    <ContentEntry name={$_("reverie.every-hue.name")} type={$_("misc.cine")} {imageCycleFlag} image={[
+            "/images/consumables/c_every_hue_quest.png",
+            "/images/consumables/c_every_hue.png",
+        ]} description={$_("reverie.every-hue.description")} tag={$_("reverie.every-hue.requires")} />
+    <ContentEntry name={$_("reverie.radioactive.name")} type={$_("misc.cine")} {imageCycleFlag} image={[
+            "/images/consumables/c_radioactive_quest.png",
+            "/images/consumables/c_radioactive.png",
+        ]} description={$_("reverie.radioactive.description")} tag={$_("reverie.radioactive.requires")} />
 </div>
 <div class="grid grid-cols-1 gap-4 mt-16">
     <ContentEntry name={$_("reverie.reverie.name")} type={$_("misc.spectral")} image="/images/consumables/c_reverie.png"
@@ -203,6 +217,12 @@
 <div class="grid grid-cols-1 gap-4 mt-16">
     <ContentEntry name={$_("reverie.dynamic-film.name")} type={$_("misc.commonJoker")} cost={4} image="/images/jokers/j_dynamic_film.png"
         description={$_("reverie.dynamic-film.description")} />
+</div>
+<div class="grid grid-cols-1 gap-4 mt-16">
+    <ContentEntry name={$_("reverie.script.name")} type={$_("misc.voucher")} cost={10} image="/images/vouchers/v_script.png"
+        description={$_("reverie.script.description")} />
+    <ContentEntry name={$_("reverie.megaphone.name")} type={$_("misc.upgradedVoucher")} cost={10} image="/images/vouchers/v_megaphone.png"
+        description={$_("reverie.megaphone.description")} />
 </div>
 <div class="grid grid-cols-1 gap-4 mt-16">
     <ContentEntry name={$_("reverie.tag-pack-normal.name")} type={$_("misc.pack")} cost={4} {imageCycleFlag} image={[
@@ -240,6 +260,7 @@
 </div>
 <span class="mt-16 mb-4 font-bold">{$_("misc.changelog")}</span>
 <IconList kind="sparkle" items={[
+    `<xin><c>v1.2.0</></><br>${$_("reverie.changelog.1-2-0").split("|").join("<br>")}`,
     `<xin><c>v1.1.0</></><br>${$_("reverie.changelog.1-1-0").split("|").join("<br>")}`,
     `<xin><c>v1.0.2</></><br>${$_("reverie.changelog.1-0-2").split("|").join("<br>")}`,
     `<xin><c>v1.0.1</></><br>${$_("reverie.changelog.1-0-1").split("|").join("<br>")}`,
