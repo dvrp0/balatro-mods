@@ -21,10 +21,28 @@
         "upgradedVoucher": "상위 바우처",
         "back": "덱",
         "pack": "부스터 팩",
+        "tag": "태그",
         "consumable": "소모품",
         "spectral": "유령",
         "cine": "영화",
         "spoiler": "<at>Spoiler 👀</><br>Hover or touch to reveal"
+    },
+    "install": {
+        "title": "설치 가이드 - 발라트로 모드를 만듭니다",
+        "name": "모드 설치 방법",
+        "windows": "이 가이드에서는 Windows 환경에서 모드를 설치하는 방법만을 다룹니다.",
+        "lovely": "Lovely 설치",
+        "steamodded": "Steamodded 설치",
+        "mod": "모드 설치",
+        "trouble": "문제 해결",
+        "1": "<a href=\"https://github.com/ethangreen-dev/lovely-injector/releases\" target=\"_blank\">링크</a>를 눌러 나오는 페이지에서 최신 버전의 <xin><c>version.dll</></>을 다운로드하세요.",
+        "2": "위 사진과 같이 발라트로가 설치된 폴더를 열고 다운로드받은 <xin><c>version.dll</></>을 그곳으로 옮깁니다.",
+        "3": "<a href=\"https://github.com/Steamopollys/Steamodded/releases\" target=\"_blank\">링크</a>를 눌러 나오는 페이지에서 <xin><c>Source code (zip)</></>을 클릭해 최신 버전의 <xin><c>Steamodded.zip</></> 압축 파일을 다운로드하세요.",
+        "4": "<xin>윈도우 키 + <c>R</></>을 눌러 실행 창을 열고 사진과 같이 입력합니다. 열린 경로에 <xin><c>Mods</></> 폴더가 없다면 만들어 주세요.",
+        "5": "다운로드받은 <xin><c>Steamodded.zip</></>을 <xin><c>Mods</></> 폴더 안에 압축 해체합니다. 이때 <xin><c>Steamodded</></> 폴더 안에 동일한 이름의 폴더가 중첩되어 있으면 <mult>안 됩니다</>.",
+        "6": "다운로드받은 모드 압축 파일을 <xin><c>Mods</></> 폴더 안에 압축 해제합니다. 마찬가지로 모드 폴더 안에 동일한 이름의 폴더가 중첩되어 있으면 <mult>안 됩니다</>.",
+        "7": "발라트로를 실행했을 때 검은색 콘솔이 함께 실행되면 모드가 정상적으로 설치된 것입니다 🥳🎉",
+        "trouble-1": "게임을 실행하자마자 사진과 같은 오류가 표시된다면 Steam의 발라트로 설정에서 <at>게임 파일 무결성 검사</>를 진행해 보세요."
     },
     "ror": {
         "title": "리스크 오브 제스터 - 발라트로 모드를 만듭니다",
