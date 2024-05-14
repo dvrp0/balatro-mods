@@ -25,7 +25,8 @@
         "consumable": "Consumable",
         "spectral": "Spectral",
         "cine": "Cine",
-        "spoiler": "<at>Spoiler 👀</><br>Hover or touch to reveal"
+        "spoiler": "<at>Spoiler 👀</><br>Hover or touch to reveal",
+        "install-guide": "See <a href=\"/install\" target=\"_blank\">installation guide</a> for more details."
     },
     "install": {
         "title": "Installation Guide - DVRP's Balatro Mods",

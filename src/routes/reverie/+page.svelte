@@ -8,6 +8,7 @@
     import { GITHUB_RELEASE_API_URL, GITHUB_RELEASE_DOWNLOAD_URL } from "$lib/const";
     import { latest } from "$lib/store";
     import ContentEntry from "$components/ContentEntry.svelte";
+    import Comment from "$components/Comment.svelte";
     import Icon from "$components/Icon.svelte";
     import IconList from "$components/IconList.svelte";
     import LargeImageViewer from "$components/LargeImageViewer.svelte";
@@ -120,6 +121,10 @@
 <span class="mt-16">{$_("reverie.intro-1")}</span>
 <span class="mt-4">{$_("reverie.intro-2")}</span>
 <span class="mt-16 mb-4 font-bold">{$_("misc.installation")}</span>
+<Comment>
+    <Rich text={$_("misc.install-guide")} />
+</Comment>
+<div class="mb-4"></div>
 <IconList kind="sparkle" items={[
     $_("reverie.install-1"),
     $_("reverie.install-2"),

@@ -25,7 +25,8 @@
         "consumable": "소모품",
         "spectral": "유령",
         "cine": "영화",
-        "spoiler": "<at>Spoiler 👀</><br>Hover or touch to reveal"
+        "spoiler": "<at>Spoiler 👀</><br>Hover or touch to reveal",
+        "install-guide": "자세한 내용은 <a href=\"/install\" target=\"_blank\">설치 가이드</a>에서 확인하세요."
     },
     "install": {
         "title": "설치 가이드 - 발라트로 모드를 만듭니다",
