@@ -112,13 +112,13 @@
 </Comment>
 <div class="mb-4" />
 <IconList kind="sparkle" items={[
+    `img::${installScreenshots[0]}`,
     $_("kor.install-1"),
-    `<img src="${installScreenshots[0]}" alt="ProperKorean Screenshot" loading="lazy" />`,
+    `img::${installScreenshots[1]}`,
+    `img::${installScreenshots[2]}`,
     $_("kor.install-2"),
-    `<img src="${installScreenshots[1]}" alt="ProperKorean Screenshot" loading="lazy" />`,
-    `<img src="${installScreenshots[2]}" alt="ProperKorean Screenshot" loading="lazy" />`,
+    `img::${installScreenshots[3]}`,
     $_("kor.install-3"),
-    `<img src="${installScreenshots[3]}" alt="ProperKorean Screenshot" loading="lazy" />`,
     $_("kor.install-4"),
     $_("kor.install-5"),
     $_("kor.install-6")

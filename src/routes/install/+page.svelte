@@ -59,33 +59,33 @@
 </Comment>
 <span class="font-bold mt-16 mb-4">{$_("install.lovely")}</span>
 <IconList kind="sparkle" items={[
-    `<img src="${installScreenshots[0]}" alt="ProperKorean Screenshot" loading="lazy" />`,
+    `img::${installScreenshots[0]}`,
     $_("install.1"),
-    `<img src="${installScreenshots[1]}" alt="ProperKorean Screenshot" loading="lazy" />`,
-    `<img src="${installScreenshots[2]}" alt="ProperKorean Screenshot" loading="lazy" />`,
+    `img::${installScreenshots[1]}`,
+    `img::${installScreenshots[2]}`,
     $_("install.2")
 ]} />
 <span class="font-bold mt-16 mb-4">{$_("install.steamodded")}</span>
 <IconList kind="sparkle" items={[
-    `<img src="${installScreenshots[4]}" alt="ProperKorean Screenshot" loading="lazy" />`,
+    `img::${installScreenshots[4]}`,
     $_("install.3"),
-    `<img src="${installScreenshots[3]}" alt="ProperKorean Screenshot" loading="lazy" />`,
+    `img::${installScreenshots[3]}`,
     $_("install.4"),
-    `<img src="${installScreenshots[5]}" alt="ProperKorean Screenshot" loading="lazy" />`,
-    `<img src="${installScreenshots[6]}" alt="ProperKorean Screenshot" loading="lazy" />`,
+    `img::${installScreenshots[5]}`,
+    `img::${installScreenshots[6]}`,
     $_("install.5")
 ]} />
 <span class="font-bold mt-16 mb-4">{$_("install.mod")}</span>
 <IconList kind="sparkle" items={[
-    `<img src="${installScreenshots[7]}" alt="ProperKorean Screenshot" loading="lazy" />`,
-    `<img src="${installScreenshots[8]}" alt="ProperKorean Screenshot" loading="lazy" />`,
+    `img::${installScreenshots[7]}`,
+    `img::${installScreenshots[8]}`,
     $_("install.6"),
-    `<img src="${installScreenshots[9]}" alt="ProperKorean Screenshot" loading="lazy" />`,
+    `img::${installScreenshots[9]}`,
     $_("install.7")
 ]} />
 <span class="font-bold mt-16 mb-4">{$_("install.trouble")}</span>
 <IconList kind="sparkle" items={[
-    `<img src="${installScreenshots[10]}" alt="ProperKorean Screenshot" loading="lazy" />`,
-    `<img src="${installScreenshots[11]}" alt="ProperKorean Screenshot" loading="lazy" />`,
+    `img::${installScreenshots[10]}`,
+    `img::${installScreenshots[11]}`,
     $_("install.trouble-1")
 ]} />
