@@ -30,6 +30,7 @@
     },
     "install": {
         "title": "Installation Guide - DVRP's Balatro Mods",
+        "description": "Learn how to install Balatro mods with Steamodded and Lovely.",
         "name": "How to install mods",
         "windows": "This guide only covers the method for installing mods on Windows.",
         "lovely": "Install Lovely",

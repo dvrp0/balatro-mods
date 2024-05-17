@@ -30,6 +30,7 @@
     },
     "install": {
         "title": "설치 가이드 - 발라트로 모드를 만듭니다",
+        "description": "Steamodded와 Lovely를 통해 발라트로 모드를 설치하는 방법을 확인해 보세요.",
         "name": "모드 설치 방법",
         "windows": "이 가이드에서는 Windows 환경에서 모드를 설치하는 방법만을 다룹니다.",
         "lovely": "Lovely 설치",
