@@ -11,9 +11,12 @@
 
     const title = $_("kor.title");
     const description = $_("kor.description");
-    const installScreenshots = Object.keys(import.meta.glob("/static/images/screenshots/properkorean/install/*.webp", {
+    const installScreenshots = Object.keys(import.meta.glob("/static/images/screenshots/install/*.webp", {
         eager: true
-    })).map(x => x.replace("/static", ""));
+    }))
+        .map(x => x.replace("/static", ""))
+        .filter(x => !x.split("/")[4].includes("en"))
+        .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
     const screenshots = Object.keys(import.meta.glob("/static/images/screenshots/properkorean/*.webp", {
         eager: true
     })).map(x => x.replace("/static", ""));
@@ -113,15 +116,16 @@
 <div class="mb-4" />
 <IconList kind="sparkle" items={[
     `img::${installScreenshots[0]}`,
-    $_("kor.install-1"),
+    $_("install.1"),
     `img::${installScreenshots[1]}`,
     `img::${installScreenshots[2]}`,
-    $_("kor.install-2"),
+    $_("install.2"),
     `img::${installScreenshots[3]}`,
-    $_("kor.install-3"),
-    $_("kor.install-4"),
-    $_("kor.install-5"),
-    $_("kor.install-6")
+    $_("install.4"),
+    $_("kor.install-1"),
+    $_("kor.install-2"),
+    `img::${installScreenshots[9]}`,
+    $_("install.7")
 ]} />
 <span class="font-bold mt-16 mb-4">{$_("kor.changes")}</span>
 <IconList kind="sparkle" items={[
