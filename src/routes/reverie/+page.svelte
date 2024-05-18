@@ -2,11 +2,12 @@
     import { onMount } from "svelte";
     import { fly } from "svelte/transition";
     import { quartOut } from "svelte/easing";
-    import { _ } from "svelte-i18n";
+    import { _, json } from "svelte-i18n";
     import { MetaTags } from "svelte-meta-tags";
     import { beforeNavigate } from "$app/navigation";
     import { GITHUB_RELEASE_API_URL, GITHUB_RELEASE_DOWNLOAD_URL } from "$lib/const";
     import { latest } from "$lib/store";
+    import type { Changelog } from "$lib/types";
     import ContentEntry from "$components/ContentEntry.svelte";
     import Comment from "$components/Comment.svelte";
     import Icon from "$components/Icon.svelte";
@@ -26,6 +27,7 @@
     }))
         .map(x => x.replace("/static", ""))
         .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }));
+    const changelog = ($json("reverie.changelog") as Changelog[]).reverse();
 
     let tag = $latest?.["reverie"] ?? undefined;
     let selectedImage: string | undefined = undefined;
@@ -264,12 +266,6 @@
     {/each}
 </div>
 <span class="mt-16 mb-4 font-bold">{$_("misc.changelog")}</span>
-<IconList kind="sparkle" items={[
-    `<xin><c>v1.2.2</></><br>${$_("reverie.changelog.1-2-2").split("|").join("<br>")}`,
-    `<xin><c>v1.2.1</></><br>${$_("reverie.changelog.1-2-1").split("|").join("<br>")}`,
-    `<xin><c>v1.2.0</></><br>${$_("reverie.changelog.1-2-0").split("|").join("<br>")}`,
-    `<xin><c>v1.1.0</></><br>${$_("reverie.changelog.1-1-0").split("|").join("<br>")}`,
-    `<xin><c>v1.0.2</></><br>${$_("reverie.changelog.1-0-2").split("|").join("<br>")}`,
-    `<xin><c>v1.0.1</></><br>${$_("reverie.changelog.1-0-1").split("|").join("<br>")}`,
-    `<xin><c>v1.0.0</></><br>${$_("reverie.changelog.1-0-0").split("|").join("<br>")}`
-]} />
+<IconList kind="sparkle" items={changelog.map(x =>
+    `<xin><c>v${x.version}</></><br>${x.text.split("|").join("<br>")}`
+)} />
