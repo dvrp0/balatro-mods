@@ -210,6 +210,10 @@
             {
                 "version": "1.2.3",
                 "text": "🔧 Fixed a bug where redeeming Megaphone didn't update descriptions of owned Exchange Coupons"
+            },
+            {
+                "version": "1.2.4",
+                "text": "🔧 Fixed a bug where using Reverie without Codex Arcanum crashed the game|🔧 Fixed a bug where card back of purchased playing cards during Poker Face was Red Deck's one|🔧 Improved interaction between Poker Face and Illusion"
             }
         ],
         "cines-1": "<cine>Cine</> cards are new type of consumables that can temporarily spice up your shop. To get them, you first need to earn <cine>Exchange Coupons</> from Booster Packs or Tags.",
