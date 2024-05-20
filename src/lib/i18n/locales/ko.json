@@ -165,7 +165,7 @@
         "name": "레버리",
         "intro-1": "Ever had a dream where all shop cards become Negative? Or a dream that shop becomes complete gacha and RNG? They are all here, just prepare your tickets!",
         "intro-2": "Reverie is a movie-themed Balatro expansion that focuses on providing special shops and various contents around it.",
-        "install-1": "Install <a href=\"https://github.com/Steamopollys/Steamodded/releases\" target=\"_blank\">Steamodded</a> <at>(0.9.8 or higher)</> and <a href=\"https://github.com/ethangreen-dev/lovely-injector/releases\" target=\"_blank\">Lovely</a> <at>(v0.5.0-beta2 or higher)</>.",
+        "install-1": "Install <a href=\"https://github.com/Steamopollys/Steamodded/releases\" target=\"_blank\">Steamodded</a> <at>0.9.8</> and <a href=\"https://github.com/ethangreen-dev/lovely-injector/releases\" target=\"_blank\">Lovely</a> <at>(v0.5.0-beta2 or higher)</>.",
         "install-2": "Download the mod and unzip it.",
         "install-3": "Put <xin><c>Reverie</></> folder into <xin><c>C:\\Users\\(USER)\\AppData\\Roaming\\Balatro\\Mods</></>. Create the <xin><c>Mods</></> folder if it doesn't exist.",
         "languages": {
