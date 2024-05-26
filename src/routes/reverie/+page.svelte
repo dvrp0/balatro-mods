@@ -27,7 +27,7 @@
     }))
         .map(x => x.replace("/static", ""))
         .sort((a, b) => b.localeCompare(a, undefined, { numeric: true }));
-    const changelog = ($json("reverie.changelog") as Changelog[]).reverse();
+    const changelog = $json("reverie.changelog") as Changelog[];
 
     let tag = $latest?.["reverie"] ?? undefined;
     let selectedImage: string | undefined = undefined;
@@ -266,6 +266,6 @@
     {/each}
 </div>
 <span class="mt-16 mb-4 font-bold">{$_("misc.changelog")}</span>
-<IconList kind="sparkle" items={changelog.map(x =>
+<IconList kind="sparkle" items={changelog.slice().reverse().map(x =>
     `<xin><c>v${x.version}</></><br>${x.text.split("|").join("<br>")}`
 )} />
