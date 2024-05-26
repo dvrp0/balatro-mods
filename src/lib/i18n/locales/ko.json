@@ -209,7 +209,11 @@
             },
             {
                 "version": "1.2.4",
-                "text": "🔧 Fixed a bug where using Reverie without Codex Arcanum crashed the game|🔧 Fixed a bug where card back of purchased playing cards during Poker Face was Red Deck's one|🔧 Improved interaction between Poker Face and Illusion"
+                "text": "🔧 Fixed a bug where using Reverie without Codex Arcanum crashed the game|🔧 Fixed a bug where Playing Cards purchased during Poker Face always had the card back of Red Deck|🔧 Improved interaction between Poker Face and Illusion"
+            },
+            {
+                "version": "1.2.5",
+                "text": "🔧 Improved compatibility with DX Tarots|🔧 Fixed a bug where the card back on Continue Run screen was always Red Deck|🔧 Fixed descriptions of Negative tooltips for Cine cards to be correct|🔧 Fixed a bug where some UI elements outside of the run could progress Eerie Inn Exchange Coupon"
             }
         ],
         "cines-1": "<cine>Cine</> cards are new type of consumables that can temporarily spice up your shop. To get them, you first need to earn <cine>Exchange Coupons</> from Booster Packs or Tags.",
