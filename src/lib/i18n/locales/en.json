@@ -339,5 +339,27 @@
             "name": "Megaphone",
             "description": "Requirements of <cine>Cine</> cards are halved"
         }
+    },
+    "distro": {
+        "title": "Distro - DVRP's Balatro Mods",
+        "description": "Adds Discord Rich Presence support.",
+        "name": "Distro",
+        "intro": "Distro is a simple utility mod that adds Discord Rich Presence support. Show your friends how you are breaking the game, or how you folded like a cheap suit 😈",
+        "install-tip": "Both Steamodded 0.9.8 and 1.0.0 are supported. Lovely is not required, but recommended for more stable behaviour.",
+        "install-1": "Install <a href=\"https://github.com/Steamopollys/Steamodded/releases\" target=\"_blank\">Steamodded</a> and <a href=\"https://github.com/ethangreen-dev/lovely-injector/releases\" target=\"_blank\">Lovely</a>.",
+        "install-2": "Download the mod and unzip it.",
+        "install-3": "Put <xin><c>Distro</></> folder into <xin><c>C:\\Users\\(USER)\\AppData\\Roaming\\Balatro\\Mods</></>. Create the <xin><c>Mods</></> folder if it doesn't exist.",
+        "features": "Features",
+        "features-1": "Shows currently playing deck and stake",
+        "features-2": "Shows current Ante level and round",
+        "features-3": "Shows current game state, e.g. remaining Hands and Discards",
+        "features-4": "Supports modded contents",
+        "features-5": "Works on both Windows and Mac",
+        "changelog": [
+            {
+                "version": "1.0.0",
+                "text": "🎉 Mod released"
+            }
+        ]
     }
 }

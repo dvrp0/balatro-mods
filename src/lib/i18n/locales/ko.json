@@ -335,5 +335,27 @@
             "name": "Megaphone",
             "description": "Requirements of <cine>Cine</> cards are halved"
         }
+    },
+    "distro": {
+        "title": "디스트로 - 발라트로 모드를 만듭니다",
+        "description": "디스코드 활동 상태에 발라트로 정보를 표시합니다.",
+        "name": "디스트로",
+        "intro": "디스트로는 디스코드 활동 상태에 발라트로 정보를 표시하는 간단한 편의성 모드입니다. 어떤 사기를 치고 있는지, 아니면 어떻게 망해가고 있는지를 친구들에게 보여 주세요 😈",
+        "install-tip": "Steamodded 0.9.8과 1.0.0 모두 지원됩니다. Lovely는 반드시 요구되지는 않으나 보다 안정된 동작을 위해 설치하는 것을 권장합니다.",
+        "install-1": "<a href=\"https://github.com/Steamopollys/Steamodded/releases\" target=\"_blank\">Steamodded</a>와 <a href=\"https://github.com/ethangreen-dev/lovely-injector/releases\" target=\"_blank\">Lovely</a>를 설치합니다.",
+        "install-2": "모드를 다운로드받고 압축 해체합니다.",
+        "install-3": "<xin><c>Distro</></> 폴더를 <xin><c>C:\\Users\\(USER)\\AppData\\Roaming\\Balatro\\Mods</></> 경로로 옮깁니다. <xin><c>Mods</></> 폴더가 없다면 만들어 주세요.",
+        "features": "기능",
+        "features-1": "현재 플레이 중인 덱과 판돈 난이도 표시",
+        "features-2": "현재 앤티 단계와 라운드 표시",
+        "features-3": "남은 핸드 및 버리기와 같은 현재 게임 상태 표시",
+        "features-4": "모드로 추가되는 컨텐츠 대응",
+        "features-5": "Windows와 Mac 모두에서 작동",
+        "changelog": [
+            {
+                "version": "1.0.0",
+                "text": "🎉 모드 출시"
+            }
+        ]
     }
 }
