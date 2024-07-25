@@ -218,6 +218,10 @@
             {
                 "version": "1.2.5",
                 "text": "🔧 Improved compatibility with DX Tarots|🔧 Fixed a bug where the card back on Continue Run screen was always Red Deck|🔧 Fixed descriptions of Negative tooltips for Cine cards to be correct|🔧 Fixed a bug where some UI elements outside of the run could progress Eerie Inn Exchange Coupon"
+            },
+            {
+                "version": "1.2.6",
+                "text": "🔼 Changed Script: +1 card slot → +2 card slot|🔧 Add assertions to prevent the game from running if Lovely is not installed or the mod folder is nested|🔧 Fixed a bug where redeeming Script voucher while Cine card is activated did not increase the shop slot|🔧 Fixed a bug where you couldn't select Cine cards with controller|🔧 Fixed a bug where you couldn't select the contents of Crazy Lucky Pack with controller|🔧 Fixed a bug where you couldn't select the flipped pack with controller|🔧 Fixed a bug where buying a tag in the shop would move the focus of the controller to Joker slot"
             }
         ],
         "cines-1": "<cine>Cine</> cards are new type of consumables that can temporarily spice up your shop. To get them, you first need to earn <cine>Exchange Coupons</> from Booster Packs or Tags.",
@@ -333,7 +337,7 @@
         },
         "script": {
             "name": "Script",
-            "description": "<at>+1</> card slot available in shop while <cine>Cine</> card is active"
+            "description": "<at>+2</> card slot available in shop while <cine>Cine</> card is active"
         },
         "megaphone": {
             "name": "Megaphone",
