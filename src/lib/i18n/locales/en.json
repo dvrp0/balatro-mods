@@ -221,7 +221,7 @@
             },
             {
                 "version": "1.2.6",
-                "text": "🔼 Changed Script: +1 card slot → +2 card slot|🔧 Add assertions to prevent the game from running if Lovely is not installed or the mod folder is nested|🔧 Fixed a bug where redeeming Script voucher while Cine card is activated did not increase the shop slot|🔧 Fixed a bug where you couldn't select Cine cards with controller|🔧 Fixed a bug where you couldn't select the contents of Crazy Lucky Pack with controller|🔧 Fixed a bug where you couldn't select the flipped pack with controller|🔧 Fixed a bug where buying a tag in the shop would move the focus of the controller to Joker slot"
+                "text": "🔼 Changed Script: +1 card slot → +2 card slot|🔧 Added assertions to prevent the game from running if Lovely is not installed or the mod folder is nested|🔧 Fixed float arithmetics for shader compatibility <a href=\"https://github.com/dvrp0/reverie/pull/5\" target=\"_blank\">#5</a>|🔧 Fixed a bug where redeeming Script voucher while Cine card is activated did not increase the shop slot|🔧 Fixed a bug where you couldn't select Cine cards with controller|🔧 Fixed a bug where you couldn't select the contents of Crazy Lucky Pack with controller|🔧 Fixed a bug where you couldn't select the flipped pack with controller|🔧 Fixed a bug where buying a tag in the shop would move the focus of the controller to Joker slot"
             }
         ],
         "cines-1": "<cine>Cine</> cards are new type of consumables that can temporarily spice up your shop. To get them, you first need to earn <cine>Exchange Coupons</> from Booster Packs or Tags.",
