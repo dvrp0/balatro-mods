@@ -1,9 +1,10 @@
 <script lang="ts">
     import { onMount } from "svelte";
-    import { _ } from "svelte-i18n";
+    import { _, json } from "svelte-i18n";
     import { MetaTags } from "svelte-meta-tags";
     import { GITHUB_RELEASE_API_URL, GITHUB_RELEASE_DOWNLOAD_URL } from "$lib/const";
     import { latest } from "$lib/store";
+    import type { Changelog } from "$lib/types";
     import Comment from "$components/Comment.svelte";
     import Icon from "$components/Icon.svelte";
     import IconList from "$components/IconList.svelte";
@@ -20,6 +21,7 @@
     const screenshots = Object.keys(import.meta.glob("/static/images/screenshots/properkorean/*.webp", {
         eager: true
     })).map(x => x.replace("/static", ""));
+    const changelog = $json("kor.changelog") as Changelog[];
     const beta: string | undefined = undefined
 
     onMount(async () => {
@@ -144,13 +146,7 @@
         <img {src} alt="ProperKorean Screenshot" loading="lazy" />
     {/each}
 </div>
-<span class="font-bold mt-16 mb-4">{$_("misc.changelog")}</span>
-<IconList kind="sparkle" items={[
-    `<xin><c>v0.5.0</></> : ${$_("kor.changelog.0-5-0")}`,
-    `<xin><c>v0.4.1</></> : ${$_("kor.changelog.0-4-1")}`,
-    `<xin><c>v0.4.0</></> : ${$_("kor.changelog.0-4-0")}`,
-    `<xin><c>v0.3.22</></> : ${$_("kor.changelog.0-3-22")}`,
-    `<xin><c>v0.3.0</></> : ${$_("kor.changelog.0-3-0")}`,
-    `<xin><c>v0.2.0</></> : ${$_("kor.changelog.0-2-0")}`,
-    `<xin><c>v0.1.0</></> : ${$_("kor.changelog.0-1-0")}`
-]} />
+<span class="mt-16 mb-4 font-bold">{$_("misc.changelog")}</span>
+<IconList kind="sparkle" items={changelog.slice().reverse().map(x =>
+    `<xin><c>v${x.version}</></><br>${x.text.split("|").join("<br>")}`
+)} />
